@@ -5,8 +5,8 @@
 
 :root {
   /* Conservative, trust-building color palette */
-  --background: oklch(0.985 0.001 250);
-  --foreground: oklch(0.15 0.02 250);
+  --background: oklch(0.975 0.008 92);
+  --foreground: oklch(0.19 0.008 85);
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.15 0.02 250);
@@ -15,17 +15,17 @@
   --popover-foreground: oklch(0.15 0.02 250);
 
   /* Deep navy blue - professional and trustworthy */
-  --primary: oklch(0.35 0.08 250);
-  --primary-foreground: oklch(0.98 0.002 250);
+  --primary: oklch(0.76 0.15 90);
+  --primary-foreground: oklch(0.19 0.008 85);
 
   /* Charcoal - sophisticated secondary */
-  --secondary: oklch(0.2 0.015 250);
+  --secondary: oklch(0.22 0.008 85);
   --secondary-foreground: oklch(0.96 0.002 250);
 
-  --muted: oklch(0.96 0.003 250);
-  --muted-foreground: oklch(0.45 0.01 250);
+  --muted: oklch(0.93 0.009 90);
+  --muted-foreground: oklch(0.47 0.008 85);
 
-  --accent: oklch(0.94 0.005 250);
+  --accent: oklch(0.9 0.04 90);
   --accent-foreground: oklch(0.2 0.015 250);
 
   --destructive: oklch(0.5 0.15 25);
@@ -33,7 +33,7 @@
 
   --border: oklch(0.9 0.005 250);
   --input: oklch(0.96 0.003 250);
-  --ring: oklch(0.35 0.08 250);
+  --ring: oklch(0.76 0.15 90);
 
   /* Professional muted colors */
   --care-blue: oklch(0.45 0.08 240);
@@ -44,7 +44,7 @@
   --success: oklch(0.5 0.08 170);
 
   /* Subtle accent - warm gold for highlights */
-  --gold: oklch(0.65 0.1 70);
+  --gold: oklch(0.79 0.16 91);
   --purple: oklch(0.45 0.06 280);
 
   --chart-1: var(--primary);
@@ -53,7 +53,7 @@
   --chart-4: var(--gastro-orange);
   --chart-5: var(--gold);
 
-  --radius: 0.25rem;
+  --radius: 0.15rem;
 
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -376,6 +376,53 @@ section[id] {
   50% {
     box-shadow: 0 0 0 8px rgba(220, 60, 50, 0);
   }
+}
+
+/* Rheinland Solutions — architectural yellow/graphite design system */
+body {
+  background-image: linear-gradient(90deg, transparent 49.9%, oklch(0.2 0.01 85 / 0.035) 50%, transparent 50.1%);
+  background-size: min(100%, 1440px) 100%;
+}
+
+.container { max-width: 1280px; }
+
+.rs-logo { display: inline-flex; align-items: center; gap: .7rem; color: white; line-height: 1; }
+.rs-logo--dark { color: var(--foreground); }
+.rs-logo__mark { position: relative; display: grid; width: 2rem; height: 2rem; grid-template-columns: 1fr 1fr; gap: 3px; transform: skew(-8deg); }
+.rs-logo__mark i { background: var(--gold); }
+.rs-logo__mark i:last-child { height: 66%; align-self: end; background: currentColor; opacity: .8; }
+.rs-logo__name { display: grid; gap: .22rem; letter-spacing: .07em; }
+.rs-logo__name strong { font-size: .83rem; font-weight: 750; }
+.rs-logo__name small { font-size: .54rem; letter-spacing: .32em; opacity: .62; }
+.rs-logo--sm { transform: scale(.9); transform-origin: left center; }
+.rs-logo--lg { transform: scale(1.16); transform-origin: left center; }
+
+.glass-dark { background: oklch(0.2 0.008 85 / .93); border-bottom: 1px solid oklch(1 0 0 / .1); backdrop-filter: blur(18px); }
+.hero-modern { isolation: isolate; border-bottom: 8px solid var(--gold); }
+.hero-modern::after { content: ""; position: absolute; z-index: 1; right: 0; bottom: -1px; width: 35vw; height: 8px; background: white; }
+.hero-grid { opacity: .13; background-image: linear-gradient(oklch(1 0 0 / .25) 1px, transparent 1px), linear-gradient(90deg, oklch(1 0 0 / .25) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(90deg, black, transparent 78%); }
+.hero-form { position: relative; }
+.hero-form::before { content: "PROJECT / 01"; position: absolute; right: -1.5rem; top: -2.7rem; color: white; opacity: .45; font: 600 .62rem/1 var(--font-mono); letter-spacing: .2em; }
+.hero-form > * { border-radius: 0 !important; box-shadow: -14px 14px 0 var(--gold) !important; border-color: oklch(1 0 0 / .25) !important; }
+
+section { position: relative; }
+section:not(.hero-modern) h2 { letter-spacing: -.035em; }
+#leistungen { clip-path: polygon(0 3rem, 70% 0, 100% 3rem, 100% 100%, 0 100%); padding-top: 10rem; margin-top: -3rem; }
+#leistungen button, #leistungen a, #ablauf a, footer a { border-radius: 0; }
+#leistungen [class*="rounded-full"] { border-radius: 0; transform: rotate(-3deg); }
+#ablauf .grid.lg\:grid-cols-3 > div:nth-child(2) { transform: translateY(2.5rem); }
+#referenzen { background-image: linear-gradient(135deg, transparent 74%, oklch(0.79 0.16 91 / .12) 74%); }
+footer { border-top: 8px solid var(--gold); }
+footer input { border-radius: 0 !important; }
+
+@media (max-width: 1023px) {
+  #leistungen { clip-path: polygon(0 1.5rem, 75% 0, 100% 1.5rem, 100% 100%, 0 100%); padding-top: 7rem; }
+  #ablauf .grid.lg\:grid-cols-3 > div:nth-child(2) { transform: none; }
+  .hero-form::before { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
 @keyframes marquee {

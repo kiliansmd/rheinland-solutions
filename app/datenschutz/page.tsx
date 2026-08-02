@@ -5,8 +5,8 @@ import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | RheinlandSolutions",
-  description: "Datenschutzerklärung der RheinlandSolutions GmbH gemäß DSGVO.",
+  title: "Datenschutzerklärung | Rheinland Solutions",
+  description: "Datenschutzerklärung von Rheinland Solutions gemäß DSGVO.",
   robots: {
     index: true,
     follow: true,
@@ -56,11 +56,11 @@ export default function DatenschutzPage() {
                 Verantwortlicher für die Datenverarbeitung auf dieser Website ist:
               </p>
               <address className="not-italic text-muted-foreground leading-relaxed mt-3">
-                RheinlandSolutions GmbH<br />
-                Musterstraße 123<br />
-                12345 Musterstadt<br />
+                Rheinland Solutions<br />
+                Inhaber: Kevin Müller<br />
+                Spitzwegstraße 23A<br />
+                42719 Solingen<br />
                 Deutschland<br /><br />
-                Telefon: +49 123 456 789 00<br />
                 E-Mail: info@rheinland-solutions.de
               </address>
             </section>

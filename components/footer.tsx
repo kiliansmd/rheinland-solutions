@@ -151,7 +151,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span className="text-secondary-foreground/70 text-sm">
-                  Musterstraße 123, 12345 Musterstadt
+                  Spitzwegstraße 23A, 42719 Solingen, Deutschland
                 </span>
               </li>
             </ul>
@@ -192,7 +192,7 @@ export function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-secondary-foreground/40">
             <p>
-              © 2026 RheinlandSolutions
+              © 2026 Rheinland Solutions · Inhaber: Kevin Müller
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a href="/impressum" className="hover:text-secondary-foreground/70 transition-colors">
