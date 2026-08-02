@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <section id="demo" className="hero-modern relative min-h-screen flex items-center">
+      <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Video Background - Desktop only */}
@@ -83,6 +84,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+      <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
   )
 }
