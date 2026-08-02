@@ -571,6 +571,28 @@ footer .bg-gold { background: var(--consulting-yellow) !important; }
 footer .bg-primary { background: var(--consulting-ink) !important; color: white !important; }
 footer a:hover { color: var(--consulting-ink) !important; }
 
+@media (min-width: 1024px) {
+  .hero-modern {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+  .hero-container {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: clamp(4rem, 8vh, 6rem);
+    padding-bottom: clamp(4rem, 8vh, 6rem);
+  }
+  .hero-form {
+    align-self: center;
+    max-width: 34rem;
+    margin-left: auto;
+    padding-block: 1.5rem;
+    transform: none;
+  }
+}
+
 @media (max-width: 1023px) {
   .hero-modern { height: 100vh; height: 100svh; min-height: 0; }
   .hero-container {

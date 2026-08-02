@@ -89,7 +89,7 @@ export function HeroSection() {
           </div>
 
           {/* Right - Interactive Form */}
-          <div className="hero-form hidden lg:block lg:col-span-5 w-full lg:translate-y-12">
+          <div className="hero-form hidden lg:block lg:col-span-5 w-full">
             <InteractiveLeadForm />
           </div>
         </div>
