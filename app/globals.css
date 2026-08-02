@@ -440,6 +440,61 @@ footer input { border-radius: 0 !important; }
   #leistungen > .container > div:nth-of-type(2) { justify-content: flex-start; margin-top: 0; margin-bottom: 3rem; }
 }
 
+/* Shadowless, left-rail consultancy layout */
+*, *::before, *::after { box-shadow: none !important; }
+
+@media (min-width: 1024px) {
+  body > main { margin-left: 224px; width: calc(100% - 224px); }
+  .site-header {
+    right: auto !important;
+    bottom: 0;
+    width: 224px;
+    padding: 0 !important;
+    border-top: 0 !important;
+    border-right: 1px solid rgb(16 18 63 / .16);
+    border-bottom: 0;
+    background: var(--consulting-paper) !important;
+  }
+  .site-header::before { content: ""; display: block; height: 10px; background: var(--consulting-yellow); }
+  .site-header > .container { height: calc(100% - 10px); padding: 2.25rem 1.5rem; }
+  .site-header > .container > div { height: 100%; flex-direction: column; align-items: stretch; justify-content: flex-start; }
+  .site-header > .container > div > a { padding-bottom: 2rem; border-bottom: 1px solid rgb(16 18 63 / .14); }
+  .site-header nav { display: flex !important; flex-direction: column; align-items: flex-start; gap: .2rem; margin-top: 2rem; }
+  .site-header nav a { width: 100%; padding: .9rem 0; font-size: .7rem; color: var(--consulting-ink) !important; border-bottom: 1px solid rgb(16 18 63 / .08); }
+  .site-header nav a::after { content: "↗"; float: right; color: var(--consulting-yellow-hover); font-size: 1rem; }
+  .site-header nav a span { display: none; }
+  .site-header .hidden.lg\:block { display: block !important; margin-top: auto; }
+  .site-header .hidden.lg\:block a { width: 100%; justify-content: space-between; height: 3.25rem; }
+  .hero-modern { padding-top: 0; }
+}
+
+/* Clear section identities without floating cards or shadows */
+.trust-editorial__stats { box-shadow: none; border: 1px solid var(--consulting-ink); }
+.trust-editorial__stat { border-bottom: 6px solid transparent !important; }
+.trust-editorial__stat:hover { border-bottom-color: var(--consulting-yellow) !important; }
+.trust-editorial__guarantees { margin-top: 3.5rem !important; }
+
+#leistungen { clip-path: none; margin-top: 0; border-top: 10px solid var(--consulting-yellow); }
+#leistungen::before { content: "EXPERTISE"; position: absolute; right: 2rem; top: 4rem; color: rgb(16 18 63 / .08); font: 800 clamp(3rem, 9vw, 9rem)/1 Arial, sans-serif; letter-spacing: -.06em; }
+#leistungen [class*="rounded"] { border-radius: 0 !important; }
+
+#referenzen { border-top: 10px solid var(--consulting-ink); }
+#referenzen::before { content: "RESULTATE"; position: absolute; right: 2rem; top: 3rem; color: rgb(16 18 63 / .06); font: 800 clamp(3rem, 9vw, 9rem)/1 Arial, sans-serif; letter-spacing: -.06em; }
+#referenzen > .container > div:last-child > div { box-shadow: none; border: 1px solid var(--consulting-ink); border-bottom: 10px solid var(--consulting-yellow); }
+
+#ablauf { border-top: 1px solid var(--consulting-ink); }
+#ablauf::before { content: "01—03"; position: absolute; right: 3rem; top: 4rem; color: var(--consulting-yellow-hover); font: 800 clamp(3rem, 8vw, 8rem)/1 Arial, sans-serif; }
+#ablauf .grid.lg\:grid-cols-3 > div:nth-child(2) { transform: none; }
+#ablauf .grid.lg\:grid-cols-3 > div > div { border: 1px solid rgb(16 18 63 / .18); border-top: 7px solid var(--consulting-yellow); }
+
+#faq, section:has([data-slot="accordion"]) { border-top: 10px solid var(--consulting-yellow); }
+footer { border-top: 10px solid var(--consulting-ink); }
+
+@media (max-width: 1023px) {
+  .site-header { border-top-width: 6px; }
+  #leistungen::before, #referenzen::before, #ablauf::before { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
@@ -940,4 +995,10 @@ img {
 /* Subtle breathing animation for important elements */
 .breathing {
   animation: subtle-float 6s ease-in-out infinite;
+}
+
+/* Final cascade guard: this design intentionally uses no drop shadows. */
+html body *, html body *::before, html body *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
