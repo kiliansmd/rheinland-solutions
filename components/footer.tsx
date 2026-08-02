@@ -24,14 +24,17 @@ export function Footer() {
 
   return (
     <footer id="kontakt" className="bg-secondary text-secondary-foreground relative overflow-hidden">
+      <div className="footer-brand-strip" aria-label="Rheinland Solutions">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Logo variant="default" size="md" />
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14 relative">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-4">
-              <Logo variant="default" size="md" />
-            </div>
             <p className="text-secondary-foreground/70 mb-5 leading-relaxed text-sm">
               Ihr Partner für Digitalisierung, Prozess-Beratung und Schulungen – individuell und persönlich.
             </p>
