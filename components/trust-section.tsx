@@ -46,22 +46,22 @@ export function TrustSection() {
   }, [])
 
   return (
-    <section className="py-16 lg:py-20 bg-background relative overflow-hidden" ref={sectionRef}>
+    <section className="trust-editorial py-16 lg:py-20 bg-background relative overflow-hidden" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Awards Grid */}
         <div
           className={cn(
-            "grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-12 transition-all duration-700",
+            "trust-editorial__stats grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-12 transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
           {awards.map((award, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-5 lg:p-6 border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+              className="trust-editorial__stat bg-card p-5 lg:p-6 border border-border/50 transition-all duration-300 text-left"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 bg-muted")}>
+              <div className={cn("w-12 h-12 flex items-center justify-center mb-6 bg-muted")}>
                 <award.icon className={cn("w-6 h-6", award.color)} />
               </div>
               <div className="font-display text-2xl lg:text-3xl font-bold text-secondary">{award.value}</div>
@@ -74,14 +74,14 @@ export function TrustSection() {
         {/* Guarantees Row */}
         <div
           className={cn(
-            "flex flex-wrap justify-center gap-3 lg:gap-6 mb-12 transition-all duration-700 delay-200",
+            "trust-editorial__guarantees flex flex-wrap justify-center gap-3 lg:gap-6 mb-12 transition-all duration-700 delay-200",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
           {guarantees.map((guarantee, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 bg-success/5 border border-success/20 rounded-full px-4 py-2"
+              className="flex items-center gap-2 bg-success/5 border border-success/20 px-4 py-2"
             >
               <guarantee.icon className="w-4 h-4 text-success" />
               <span className="text-sm font-medium text-secondary">{guarantee.text}</span>
