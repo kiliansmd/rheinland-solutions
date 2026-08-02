@@ -104,7 +104,6 @@ export function Footer() {
               {[
                 { href: "#leistungen", label: "Leistungen" },
                 { href: "#ablauf", label: "Ablauf" },
-                { href: "#referenzen", label: "Referenzen" },
                 { href: "#kontakt", label: "Kontakt" },
               ].map((link) => (
                 <li key={link.label}>
