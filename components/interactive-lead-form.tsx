@@ -19,9 +19,9 @@ import {
 import { cn } from "@/lib/utils"
 
 const services = [
-  { id: "digitalisierung", name: "Digitalisierung", icon: Monitor },
-  { id: "beratung", name: "Prozess-Beratung", icon: Settings },
-  { id: "schulungen", name: "Schulungen", icon: GraduationCap },
+  { id: "digitalisierung", name: "Digitalisierung", description: "Abläufe und Services digitalisieren", icon: Monitor },
+  { id: "beratung", name: "Prozess-Beratung", description: "Potenziale erkennen und nutzen", icon: Settings },
+  { id: "schulungen", name: "Schulungen", description: "Teams sicher ins Handeln bringen", icon: GraduationCap },
 ]
 
 type FormData = {
@@ -90,13 +90,18 @@ export function InteractiveLeadForm() {
   return (
     <div className="bg-card rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-border">
       {/* Header */}
-      <div className="bg-secondary p-4 sm:p-5">
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs uppercase tracking-[0.15em] text-secondary-foreground/60 font-medium">
-            Projekt anfragen
-          </span>
-          <span className="text-xs text-secondary-foreground/50">
-            {step}/{totalSteps}
+      <div className="bg-secondary px-5 py-4 sm:px-6 sm:py-5">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <span className="block text-[10px] uppercase tracking-[0.2em] text-secondary-foreground/55 font-semibold mb-1">
+              Kostenlose Ersteinschätzung
+            </span>
+            <p className="text-sm font-semibold text-secondary-foreground">
+              In zwei Schritten zu Ihrem nächsten Projekt
+            </p>
+          </div>
+          <span className="shrink-0 text-[10px] font-semibold text-secondary bg-gold px-2 py-1" aria-live="polite">
+            {step} / {totalSteps}
           </span>
         </div>
         <div className="h-px bg-white/10 overflow-hidden">
@@ -108,27 +113,32 @@ export function InteractiveLeadForm() {
       </div>
 
       {/* Form Content */}
-      <div className="p-4 sm:p-6">
+      <div className="p-5 sm:p-6">
         {/* Step 1: Service Selection */}
         {step === 1 && (
           <div className="animate-fade-in-up">
-            <h3 className="font-display text-lg font-bold text-secondary mb-4">
-              Wofür interessieren Sie sich?
+            <h3 className="font-display text-xl font-bold text-secondary mb-1">
+              Was möchten Sie voranbringen?
             </h3>
-            <div className="space-y-3">
+            <p className="text-sm text-muted-foreground mb-5">Wählen Sie den passenden Schwerpunkt.</p>
+            <div className="space-y-2.5">
               {services.map((service) => (
                 <button
                   key={service.id}
                   onClick={() => handleSelect(service.id)}
                   className={cn(
-                    "w-full p-4 rounded-lg border-2 text-left transition-all duration-200 hover:border-primary/50 flex items-center gap-4",
+                    "w-full p-3.5 rounded-lg border text-left transition-all duration-200 hover:border-primary hover:bg-primary/5 flex items-center gap-3.5",
                     formData.service === service.id ? "border-primary bg-primary/5" : "border-border",
                   )}
                 >
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <service.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="font-medium text-secondary">{service.name}</span>
+                  <span className="min-w-0">
+                    <span className="block font-semibold text-sm text-secondary">{service.name}</span>
+                    <span className="block text-xs text-muted-foreground mt-0.5">{service.description}</span>
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-muted-foreground ml-auto shrink-0" />
                 </button>
               ))}
             </div>
@@ -138,13 +148,14 @@ export function InteractiveLeadForm() {
         {/* Step 2: Contact Info */}
         {step === 2 && (
           <div className="animate-fade-in-up">
-            <h3 className="font-display text-lg font-bold text-secondary mb-4">
-              Erzählen Sie uns von Ihrem Projekt
+            <h3 className="font-display text-xl font-bold text-secondary mb-1">
+              Wie erreichen wir Sie?
             </h3>
+            <p className="text-sm text-muted-foreground mb-4">Wir melden uns persönlich innerhalb von 24 Stunden.</p>
 
             <form onSubmit={handleSubmit} className="space-y-3">
               <Input
-                placeholder="Ihr Name *"
+                placeholder="Name *"
                 value={formData.name}
                 onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 required
@@ -166,7 +177,7 @@ export function InteractiveLeadForm() {
               />
 
               <Textarea
-                placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                placeholder="Worum geht es bei Ihrem Projekt? (optional)"
                 value={formData.message}
                 onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
                 rows={3}
