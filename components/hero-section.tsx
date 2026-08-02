@@ -10,7 +10,7 @@ export function HeroSection() {
     <section id="demo" className="hero-modern relative flex items-center bg-[#efff00] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="hero-visual absolute inset-0 z-0 overflow-hidden">
         {/* Video Background - Desktop only */}
         <video
           autoPlay
@@ -39,7 +39,7 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="hero-copy lg:col-span-7 lg:pr-10">
             {/* Label */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="hero-eyebrow flex items-center gap-4 mb-6">
               <div className="w-12 h-1 bg-[#10123f]" />
               <span className="text-xs uppercase tracking-[0.2em] text-[#10123f]/70 font-bold">
                 Beratung & Digitalisierung
@@ -51,12 +51,12 @@ export function HeroSection() {
               <span className="text-gold italic">wirkt.</span>
             </h1>
 
-            <p className="mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
+            <p className="hero-intro mt-7 sm:mt-8 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
               Von der klaren Strategie bis zur wirksamen Umsetzung: Wir vereinfachen Prozesse, schaffen digitale Lösungen und befähigen Ihr Team.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-12 sm:mt-14">
+            <div className="hero-actions flex flex-col sm:flex-row gap-3 sm:gap-4 mt-9 sm:mt-10">
               <Button
                 asChild
                 className="hero-primary-cta lg:hidden bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
