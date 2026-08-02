@@ -27,6 +27,12 @@ export const metadata: Metadata = {
   icons: {
     icon: { url: "/favicon.svg", type: "image/svg+xml" },
   },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Rheinland Solutions",
+  },
   openGraph: {
     title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
     description: "Ihr Partner für digitale Transformation und Prozessoptimierung.",
@@ -46,7 +52,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#171936",
+  themeColor: "#e8f51c",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
