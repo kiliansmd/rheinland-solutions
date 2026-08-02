@@ -194,7 +194,7 @@ export function InteractiveLeadForm() {
                 />
                 <label htmlFor="consent" className="text-xs text-muted-foreground leading-relaxed">
                   Ich stimme der Verarbeitung meiner Daten zu.{" "}
-                  <a href="#" className="text-primary hover:underline">
+                  <a href="/datenschutz" className="text-primary hover:underline">
                     Datenschutz
                   </a>
                 </label>

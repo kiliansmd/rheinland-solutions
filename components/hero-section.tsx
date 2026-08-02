@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
+    <>
     <section id="demo" className="hero-modern relative flex items-center bg-[#efff00] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
@@ -55,12 +56,21 @@ export function HeroSection() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:mt-14">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-12 sm:mt-14">
               <Button
                 asChild
-                className="bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
+                className="hero-primary-cta lg:hidden bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
               >
-                <a href="#kontakt" className="flex items-center gap-3">
+                <a href="#mobile-anfrage" className="flex items-center gap-3">
+                  Projekt anfragen
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                className="hero-primary-cta hidden lg:inline-flex bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
+              >
+                <a href="#kontakt" className="hidden lg:flex items-center gap-3">
                   Projekt anfragen
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
@@ -86,5 +96,11 @@ export function HeroSection() {
       </div>
       <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
+    <section id="mobile-anfrage" className="hero-mobile-form lg:hidden" aria-label="Projektanfrage">
+      <div className="container mx-auto px-4 sm:px-6">
+        <InteractiveLeadForm />
+      </div>
+    </section>
+    </>
   )
 }
