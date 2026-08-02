@@ -663,6 +663,18 @@ footer a:hover { color: var(--consulting-ink) !important; }
   .hero-copy > div:last-child > a:last-child { display: none; }
 }
 
+@media (max-width: 639px) {
+  .hero-copy { padding-block: 1.25rem; }
+  .hero-copy > div:first-child { margin-bottom: 1rem; }
+  .hero-copy p { margin-top: 1.5rem; }
+  .hero-copy > div:last-child { margin-top: 2rem; }
+}
+
+@media (max-height: 620px) and (max-width: 1023px) {
+  .hero-copy p { margin-top: 1rem; }
+  .hero-copy > div:last-child { margin-top: 1.25rem; }
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
