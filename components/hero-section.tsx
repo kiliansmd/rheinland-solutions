@@ -51,12 +51,12 @@ export function HeroSection() {
               <span className="text-gold italic">wirkt.</span>
             </h1>
 
-            <p className="hero-intro mt-7 sm:mt-8 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
+            <p className="hero-intro mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
               Von der klaren Strategie bis zur wirksamen Umsetzung: Wir vereinfachen Prozesse, schaffen digitale Lösungen und befähigen Ihr Team.
             </p>
 
             {/* CTA Buttons */}
-            <div className="hero-actions flex flex-col sm:flex-row gap-3 sm:gap-4 mt-9 sm:mt-10">
+            <div className="hero-actions flex flex-col sm:flex-row gap-3 sm:gap-4 mt-12 sm:mt-14">
               <Button
                 asChild
                 className="hero-primary-cta lg:hidden bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
@@ -85,6 +85,15 @@ export function HeroSection() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </Button>
+            </div>
+
+            <div className="hero-mobile-proof lg:hidden" aria-label="Unser Ansatz">
+              <p>Von Solingen aus. Für Unternehmen, die Veränderung umsetzen wollen.</p>
+              <ul>
+                <li><span>01</span> Klar analysieren</li>
+                <li><span>02</span> Praktisch umsetzen</li>
+                <li><span>03</span> Teams befähigen</li>
+              </ul>
             </div>
           </div>
 
