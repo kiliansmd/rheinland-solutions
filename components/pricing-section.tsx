@@ -10,7 +10,6 @@ import {
   ArrowRight,
   AlertTriangle,
   Gift,
-  Users,
   Palette,
   Globe,
   Mail,
@@ -216,25 +215,6 @@ export function PricingSection() {
                       </li>
                     ))}
                   </ul>
-
-                  <div className="mt-6 pt-5 border-t border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="flex -space-x-2">
-                        {[1, 2, 3].map((i) => (
-                          <div key={i} className="w-9 h-9 rounded-full border-2 border-card bg-muted overflow-hidden">
-                            <img
-                              src={`/happy-business-customer-portrait-.jpg?key=fi8mv&height=36&width=36&query=happy business customer portrait ${i}`}
-                              alt=""
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        <strong className="text-secondary">50+ Unternehmen</strong> vertrauen uns bereits
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

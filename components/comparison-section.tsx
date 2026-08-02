@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Check, X, ArrowRight, Zap, Clock, Users, TrendingDown, TrendingUp, AlertTriangle, Star } from "lucide-react"
+import { Check, X, ArrowRight, Zap, Clock, TrendingDown, TrendingUp, AlertTriangle, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -283,7 +283,7 @@ export function ComparisonSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center justify-center">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                 <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
@@ -291,15 +291,6 @@ export function ComparisonSection() {
               <div>
                 <div className="font-display font-bold text-foreground text-sm sm:text-base">Fertig in 2-4 Wochen</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">Schnelle Umsetzung</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              </div>
-              <div>
-                <div className="font-display font-bold text-foreground text-sm sm:text-base">50+ zufriedene Kunden</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">98% Weiterempfehlung</div>
               </div>
             </div>
           </div>

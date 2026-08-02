@@ -8,7 +8,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
   description:
-    "Ihr Partner für digitale Transformation: Individuelle Beratung, Prozessoptimierung und praxisnahe Schulungen. Über 100 erfolgreiche Projekte. Jetzt unverbindlich anfragen!",
+    "Ihr Partner für digitale Transformation: Individuelle Beratung, Prozessoptimierung und praxisnahe Schulungen. Jetzt unverbindlich anfragen!",
   keywords:
     "Digitalisierung, Prozessberatung, Schulungen, digitale Transformation, Unternehmensberatung, Change Management, Prozessoptimierung, Rheinland Solutions, Deutschland",
   authors: [{ name: "Rheinland Solutions" }],
@@ -26,15 +26,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: { url: "/favicon.svg", type: "image/svg+xml" },
   },
   openGraph: {
     title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
-    description: "Ihr Partner für digitale Transformation und Prozessoptimierung. Über 100 erfolgreiche Projekte deutschlandweit.",
+    description: "Ihr Partner für digitale Transformation und Prozessoptimierung.",
     type: "website",
     locale: "de_DE",
     siteName: "Rheinland Solutions",
@@ -51,7 +47,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#efff00",
+  themeColor: "#fffdf7",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
