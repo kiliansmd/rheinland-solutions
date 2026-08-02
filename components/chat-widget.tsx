@@ -72,7 +72,7 @@ export function ChatWidget() {
     return (
       <div
         className={cn(
-          "fixed bottom-0 left-0 right-0 z-50 bg-emerald-500 text-white py-3 px-4 transition-all duration-500",
+          "hidden lg:block fixed bottom-0 left-0 right-0 z-50 bg-emerald-500 text-white py-3 px-4 transition-all duration-500",
           "animate-in slide-in-from-bottom fade-in",
         )}
       >
@@ -97,7 +97,7 @@ export function ChatWidget() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-50 transition-all duration-500",
+        "hidden lg:block fixed bottom-0 left-0 right-0 z-50 transition-all duration-500",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none",
       )}
     >

@@ -788,17 +788,17 @@ footer .bg-primary { background: var(--consulting-yellow) !important; color: var
 @media (max-width: 1023px) {
   .hero-modern {
     height: auto;
-    min-height: calc(100svh - 4.75rem);
+    min-height: 0;
     align-items: stretch;
     border-bottom: 1px solid rgb(23 25 54 / .24);
   }
 
   .hero-container {
-    min-height: calc(100svh - 4.75rem);
+    min-height: 0;
     height: auto;
     align-items: center;
     padding-top: clamp(7.25rem, 15vh, 9rem);
-    padding-bottom: clamp(3.25rem, 8vh, 5rem);
+    padding-bottom: clamp(3.5rem, 8vw, 5rem);
   }
 
   .hero-copy {
@@ -847,6 +847,53 @@ footer .bg-primary { background: var(--consulting-yellow) !important; color: var
     padding-block: clamp(3rem, 8vw, 4.5rem);
     background: var(--consulting-paper);
   }
+
+  .hero-mobile-proof {
+    max-width: 34rem;
+    margin-top: clamp(3rem, 8vw, 4rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid rgb(23 25 54 / .28);
+  }
+
+  .hero-mobile-proof > p {
+    max-width: 30rem;
+    margin: 0;
+    color: var(--consulting-ink);
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 4.5vw, 1.4rem);
+    line-height: 1.25;
+  }
+
+  .hero-mobile-proof ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 1.5rem;
+    border-block: 1px solid rgb(23 25 54 / .2);
+  }
+
+  .hero-mobile-proof li {
+    display: flex;
+    min-height: 4.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .65rem;
+    padding: .75rem;
+    color: var(--consulting-ink);
+    font-size: .68rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+  }
+
+  .hero-mobile-proof li + li { border-left: 1px solid rgb(23 25 54 / .2); }
+  .hero-mobile-proof li span {
+    color: rgb(23 25 54 / .52);
+    font-family: var(--font-mono);
+    font-size: .62rem;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 639px) {
@@ -863,6 +910,9 @@ footer .bg-primary { background: var(--consulting-yellow) !important; color: var
   .hero-copy > div:first-child > div { width: 2.5rem; }
   .hero-copy p { margin-top: 2rem; }
   .hero-copy > div:last-child { margin-top: 2.5rem; }
+
+  .hero-mobile-proof { margin-top: 3rem; }
+  .hero-mobile-proof > p { margin-top: 0; }
 
   .hero-copy a {
     min-height: 3.5rem;
