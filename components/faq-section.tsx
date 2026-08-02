@@ -56,7 +56,7 @@ export function FaqSection() {
   }, [])
 
   return (
-    <section className="py-24 lg:py-32 bg-background relative" ref={sectionRef}>
+    <section id="faq" className="py-24 lg:py-32 bg-background relative" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={cn(
@@ -136,9 +136,9 @@ export function FaqSection() {
                 variant="outline"
                 className="h-12 px-6 bg-transparent hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all"
               >
-                <a href="tel:+4912345678900">
+                <a href="mailto:info@rheinland-solutions.de">
                   <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen
+                  E-Mail schreiben
                 </a>
               </Button>
             </div>

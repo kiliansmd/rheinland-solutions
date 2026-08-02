@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
+import { Analytics } from "@vercel/analytics/next"
 
 const COOKIE_CONSENT_KEY = "rs-cookie-consent"
 
@@ -12,14 +13,29 @@ type ConsentType = "all" | "essential" | null
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
+  const [analyticsAllowed, setAnalyticsAllowed] = useState(false)
 
   useEffect(() => {
-    // Check if consent was already given
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
+    let timer: ReturnType<typeof setTimeout> | undefined
+
     if (!consent) {
-      // Show banner after a short delay for better UX
-      const timer = setTimeout(() => setIsVisible(true), 1000)
-      return () => clearTimeout(timer)
+      timer = setTimeout(() => setIsVisible(true), 1000)
+    } else {
+      try {
+        const savedConsent = JSON.parse(consent) as { type?: ConsentType }
+        setAnalyticsAllowed(savedConsent.type === "all")
+      } catch {
+        localStorage.removeItem(COOKIE_CONSENT_KEY)
+        timer = setTimeout(() => setIsVisible(true), 1000)
+      }
+    }
+
+    const openSettings = () => setIsVisible(true)
+    window.addEventListener("rs:open-cookie-settings", openSettings)
+    return () => {
+      if (timer) clearTimeout(timer)
+      window.removeEventListener("rs:open-cookie-settings", openSettings)
     }
   }, [])
 
@@ -30,40 +46,45 @@ export function CookieBanner() {
         timestamp: new Date().toISOString(),
         version: "1.0"
       }))
-      
+
       // If analytics consent given, trigger analytics
       if (type === "all") {
-        // Analytics already loaded via Vercel Analytics
+        setAnalyticsAllowed(true)
+      } else {
+        setAnalyticsAllowed(false)
       }
     }
     setIsVisible(false)
   }
 
-  if (!isVisible) return null
+  if (!isVisible) return analyticsAllowed ? <Analytics /> : null
 
   return (
-    <div 
-      className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6"
-      role="dialog"
-      aria-labelledby="cookie-banner-title"
-      aria-describedby="cookie-banner-description"
-    >
+    <>
+      {analyticsAllowed && <Analytics />}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cookie-banner-title"
+        aria-describedby="cookie-banner-description"
+      >
       <div className="max-w-2xl mx-auto bg-card border border-border shadow-2xl rounded-lg overflow-hidden">
         {/* Header */}
         <div className="p-4 sm:p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
-              <h2 
-                id="cookie-banner-title" 
+              <h2
+                id="cookie-banner-title"
                 className="text-base font-semibold text-foreground"
               >
                 Datenschutzeinstellungen
               </h2>
-              <p 
-                id="cookie-banner-description" 
+              <p
+                id="cookie-banner-description"
                 className="mt-2 text-sm text-muted-foreground leading-relaxed"
               >
-                Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
+                Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten.
                 Einige sind technisch notwendig, andere helfen uns, die Website zu verbessern.
               </p>
             </div>
@@ -134,6 +155,7 @@ export function CookieBanner() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
