@@ -96,7 +96,7 @@ export function Header() {
             <div className="hidden lg:block">
               <Button
                 asChild
-                className="bg-gold hover:bg-gold/90 text-secondary font-medium px-5 h-9 text-xs uppercase tracking-[0.15em] transition-opacity"
+                className="site-header-cta bg-gold hover:bg-gold/90 text-secondary font-medium h-9 text-xs uppercase tracking-[0.15em] transition-opacity"
               >
                 <a href="#demo" onClick={(e) => handleNavClick(e, "#demo")} className="flex items-center gap-2">
                   Kontakt
