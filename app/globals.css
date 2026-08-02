@@ -782,7 +782,18 @@ h1, h2, h3 { text-wrap: balance; }
   letter-spacing: -.045em;
 }
 #leistungen .service-tabs { border-bottom: 1px solid rgb(23 25 54 / .22); }
-#leistungen .service-tabs button { padding-bottom: 1rem; }
+#leistungen .service-tabs button {
+  min-height: 4.25rem;
+  padding: 1rem clamp(1rem, 2.25vw, 2rem);
+}
+#leistungen > .container > .services-heading {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+#leistungen > .container > div:nth-of-type(2) {
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
 
 #ablauf::before {
   font-family: var(--font-display);
@@ -819,11 +830,33 @@ footer .bg-primary { background: var(--consulting-yellow) !important; color: var
   .site-header > .container { padding: 2.75rem 1.75rem 2rem; }
   .site-header nav { margin-top: 2.75rem; }
   .site-header nav a { padding-block: 1rem; }
+  .site-header .hidden.lg\:block { width: 100%; }
+  .site-header-cta {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100%;
+    min-height: 3.5rem;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-inline: 1.5rem !important;
+  }
+  .site-header-cta svg { margin-left: .75rem; }
 }
 
 @media (max-width: 1023px) {
   .hero-form { border-left: 0; padding-left: 0; }
   .container { width: min(100% - 2rem, 76rem); }
+  #leistungen > .container > .services-heading {
+    margin-bottom: clamp(2rem, 7vw, 3rem);
+  }
+  #leistungen > .container > div:nth-of-type(2) {
+    margin-bottom: clamp(3rem, 9vw, 4.5rem);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .container { width: min(100% - 3rem, 76rem); }
+  #leistungen .service-tabs button { padding-inline: clamp(1.25rem, 4vw, 2.25rem); }
 }
 
 /* Mobile hero: content-led height, crisp CTAs and a deliberate editorial finish. */
