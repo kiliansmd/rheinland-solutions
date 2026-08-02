@@ -38,7 +38,7 @@ export function TrustSection() {
         {/* Awards Grid */}
         <div
           className={cn(
-            "trust-editorial__stats grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-12 transition-all duration-700",
+            "trust-editorial__stats grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-8 lg:mb-10 transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
@@ -61,7 +61,7 @@ export function TrustSection() {
         {/* Guarantees Row */}
         <div
           className={cn(
-            "trust-editorial__guarantees flex flex-wrap justify-center gap-3 lg:gap-6 mb-12 transition-all duration-700 delay-200",
+            "trust-editorial__guarantees flex flex-wrap justify-center gap-3 lg:gap-6 transition-all duration-700 delay-200",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
