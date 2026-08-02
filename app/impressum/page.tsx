@@ -5,8 +5,8 @@ import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Impressum | RheinlandSolutions",
-  description: "Impressum und rechtliche Angaben der RheinlandSolutions GmbH gemäß § 5 TMG.",
+  title: "Impressum | Rheinland Solutions",
+  description: "Impressum und rechtliche Angaben von Rheinland Solutions gemäß § 5 DDG.",
   robots: {
     index: true,
     follow: true,
@@ -40,9 +40,9 @@ export default function ImpressumPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <address className="not-italic text-muted-foreground leading-relaxed">
-                RheinlandSolutions GmbH<br />
-                Musterstraße 123<br />
-                12345 Musterstadt<br />
+                Rheinland Solutions<br />
+                Spitzwegstraße 23A<br />
+                42719 Solingen<br />
                 Deutschland
               </address>
             </section>
@@ -53,7 +53,7 @@ export default function ImpressumPage() {
                 Vertreten durch
               </h2>
               <p className="text-muted-foreground">
-                Geschäftsführer: Max Mustermann
+                Inhaber: Kevin Müller
               </p>
             </section>
 
@@ -67,38 +67,15 @@ export default function ImpressumPage() {
               </p>
             </section>
 
-            {/* Registereintrag */}
-            <section>
-              <h2 className="text-xl font-semibold text-foreground mb-4">
-                Registereintrag
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Eintragung im Handelsregister<br />
-                Registergericht: Amtsgericht Musterstadt<br />
-                Registernummer: HRB 12345
-              </p>
-            </section>
-
-            {/* Umsatzsteuer-ID */}
-            <section>
-              <h2 className="text-xl font-semibold text-foreground mb-4">
-                Umsatzsteuer-ID
-              </h2>
-              <p className="text-muted-foreground">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-                DE123456789
-              </p>
-            </section>
-
             {/* Verantwortlich für den Inhalt */}
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-4">
                 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Max Mustermann<br />
-                Musterstraße 123<br />
-                12345 Musterstadt
+                Kevin Müller<br />
+                Spitzwegstraße 23A<br />
+                42719 Solingen
               </p>
             </section>
 

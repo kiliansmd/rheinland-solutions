@@ -136,9 +136,9 @@ export function FaqSection() {
                 variant="outline"
                 className="h-12 px-6 bg-transparent hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all"
               >
-                <a href="tel:+4912345678900">
+                <a href="mailto:info@rheinland-solutions.de">
                   <Phone className="w-4 h-4 mr-2" />
-                  Jetzt anrufen
+                  E-Mail schreiben
                 </a>
               </Button>
             </div>
