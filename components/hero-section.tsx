@@ -86,6 +86,15 @@ export function HeroSection() {
                 </a>
               </Button>
             </div>
+
+            <div className="hero-mobile-proof lg:hidden" aria-label="Unser Ansatz">
+              <p>Von Solingen aus. Für Unternehmen, die Veränderung umsetzen wollen.</p>
+              <ul>
+                <li><span>01</span> Klar analysieren</li>
+                <li><span>02</span> Praktisch umsetzen</li>
+                <li><span>03</span> Teams befähigen</li>
+              </ul>
+            </div>
           </div>
 
           {/* Right - Interactive Form */}
