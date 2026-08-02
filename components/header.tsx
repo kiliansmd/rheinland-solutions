@@ -11,7 +11,6 @@ import { Logo } from "@/components/logo"
 const navLinks = [
   { href: "#leistungen", label: "Leistungen" },
   { href: "#ablauf", label: "Ablauf" },
-  { href: "#referenzen", label: "Referenzen" },
   { href: "#kontakt", label: "Kontakt" },
 ]
 
