@@ -782,6 +782,92 @@ footer .bg-primary { background: var(--consulting-yellow) !important; color: var
   .container { width: min(100% - 2rem, 76rem); }
 }
 
+/* Mobile hero: content-led height, crisp CTAs and a deliberate editorial finish. */
+@media (max-width: 1023px) {
+  .hero-modern {
+    height: auto;
+    min-height: calc(100svh - 4.75rem);
+    align-items: stretch;
+    border-bottom: 1px solid rgb(23 25 54 / .24);
+  }
+
+  .hero-container {
+    min-height: calc(100svh - 4.75rem);
+    height: auto;
+    align-items: center;
+    padding-top: clamp(7.25rem, 15vh, 9rem);
+    padding-bottom: clamp(3.25rem, 8vh, 5rem);
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 42rem;
+  }
+
+  .hero-copy::before { display: none; }
+
+  .hero-modern h1 {
+    max-width: 11ch;
+    font-size: clamp(3rem, 11.5vw, 5rem);
+    line-height: .93;
+  }
+
+  .hero-copy p {
+    max-width: 34rem;
+    color: rgb(23 25 54 / .72);
+  }
+
+  .hero-copy > div:last-child {
+    max-width: 34rem;
+    gap: .75rem;
+  }
+
+  .hero-modern .hero-primary-cta {
+    background: var(--consulting-ink) !important;
+    color: #fff !important;
+    border-color: var(--consulting-ink) !important;
+  }
+
+  .hero-modern .hero-primary-cta:hover,
+  .hero-modern .hero-primary-cta:focus-visible {
+    background: var(--consulting-ink-soft) !important;
+    color: #fff !important;
+  }
+
+  .hero-modern .hero-primary-cta svg { color: var(--consulting-yellow) !important; }
+
+  .hero-modern .hero-primary-cta,
+  .hero-modern .hero-primary-cta + a {
+    min-height: 3.5rem;
+  }
+
+  .hero-mobile-form {
+    padding-block: clamp(3rem, 8vw, 4.5rem);
+    background: var(--consulting-paper);
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-container {
+    padding-top: max(6.75rem, calc(5.5rem + env(safe-area-inset-top)));
+    padding-bottom: max(3rem, env(safe-area-inset-bottom));
+  }
+
+  .hero-copy > div:first-child {
+    gap: .85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-copy > div:first-child > div { width: 2.5rem; }
+  .hero-copy p { margin-top: 2rem; }
+  .hero-copy > div:last-child { margin-top: 2.5rem; }
+
+  .hero-copy a {
+    min-height: 3.5rem;
+    padding-inline: 1.25rem;
+  }
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
