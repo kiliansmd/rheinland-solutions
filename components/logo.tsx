@@ -15,7 +15,7 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
     lg: { width: 220, height: 50 },
   }
 
-  const logoSrc = variant === "light" || variant === "dark" ? "/images/logo-dark.png" : "/images/logo-white.png"
+  const logoSrc = "/images/logo-dark.png"
 
   return (
     <div className={cn("relative", className)}>
@@ -24,7 +24,7 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
         alt="Rheinland Solutions"
         width={sizes[size].width}
         height={sizes[size].height}
-        className="object-contain"
+        className="object-contain brightness-0"
         priority
       />
     </div>
