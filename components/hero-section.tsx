@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section id="demo" className="hero-modern relative min-h-screen flex items-center">
+    <section id="demo" className="hero-modern relative min-h-screen flex items-center bg-[#efff00] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -33,14 +33,14 @@ export function HeroSection() {
         <div className="absolute inset-0 hero-grid" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:pt-32 sm:pb-16 lg:py-36">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start lg:items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-28 pb-16 sm:pt-36 sm:pb-20 lg:py-40">
+        <div className="hero-layout grid lg:grid-cols-12 gap-10 lg:gap-16 items-start lg:items-center">
           {/* Left Content */}
-          <div className="lg:col-span-7 text-white lg:pr-10">
+          <div className="hero-copy lg:col-span-7 lg:pr-10">
             {/* Label */}
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-px bg-gold" />
-              <span className="text-xs uppercase tracking-[0.2em] text-white/60 font-medium">
+              <div className="w-12 h-1 bg-[#10123f]" />
+              <span className="text-xs uppercase tracking-[0.2em] text-[#10123f]/70 font-bold">
                 Beratung & Digitalisierung
               </span>
             </div>
@@ -50,7 +50,7 @@ export function HeroSection() {
               <span className="text-gold italic">mit Strategie.</span>
             </h1>
 
-            <p className="mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-white/60 leading-relaxed max-w-lg">
+            <p className="mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
               Wir begleiten Sie bei der digitalen Transformation: Prozess-Beratung, Digitalisierung und Schulungen – individuell auf Ihr Unternehmen zugeschnitten.
             </p>
 
@@ -58,7 +58,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:mt-14">
               <Button
                 asChild
-                className="bg-gold hover:bg-gold/90 text-secondary font-medium h-12 px-7 text-[11px] uppercase tracking-[0.2em]"
+                className="bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
               >
                 <a href="#kontakt" className="flex items-center gap-3">
                   Projekt anfragen
@@ -68,7 +68,7 @@ export function HeroSection() {
               <Button
                 asChild
                 variant="outline"
-                className="border-white/20 text-white/80 hover:text-white hover:bg-white/5 hover:border-white/30 bg-transparent h-12 px-7 text-[11px] uppercase tracking-[0.2em]"
+                className="border-[#10123f]/40 text-[#10123f] hover:text-white hover:bg-[#10123f] bg-transparent h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
               >
                 <a href="#leistungen" className="flex items-center gap-3">
                   Unsere Leistungen

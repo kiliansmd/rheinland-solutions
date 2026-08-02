@@ -46,7 +46,7 @@ export function TrustSection() {
   }, [])
 
   return (
-    <section className="trust-editorial py-16 lg:py-20 bg-background relative overflow-hidden" ref={sectionRef}>
+    <section className="trust-editorial py-16 lg:py-20 bg-[#fcfdf7] relative overflow-hidden border-y border-[#10123f]/15" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Awards Grid */}
         <div

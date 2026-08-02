@@ -59,7 +59,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out border-t-[6px] border-t-[#efff00]",
           isScrolled ? "glass-dark py-3" : "bg-transparent py-4",
         )}
         role="banner"
