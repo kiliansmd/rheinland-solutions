@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section id="demo" className="relative min-h-screen flex items-center">
+    <section id="demo" className="hero-modern relative min-h-screen flex items-center">
+      <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Video Background - Desktop only */}
@@ -28,14 +29,14 @@ export function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Gradient overlay - slightly more transparent to show video */}
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/50 to-secondary/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/75 to-secondary/25" />
+        <div className="absolute inset-0 hero-grid" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-12 sm:pt-32 sm:pb-16 lg:py-36">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start lg:items-center">
           {/* Left Content */}
-          <div className="lg:col-span-7 text-white">
+          <div className="lg:col-span-7 text-white lg:pr-10">
             {/* Label */}
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-px bg-gold" />
@@ -78,11 +79,12 @@ export function HeroSection() {
           </div>
 
           {/* Right - Interactive Form */}
-          <div className="lg:col-span-5 w-full">
+          <div className="hero-form lg:col-span-5 w-full lg:translate-y-12">
             <InteractiveLeadForm />
           </div>
         </div>
       </div>
+      <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
   )
 }
