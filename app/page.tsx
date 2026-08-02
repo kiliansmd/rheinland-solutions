@@ -13,10 +13,10 @@ export default function Home() {
     <main className="min-h-screen min-h-dvh">
       <Header />
       <HeroSection />
-      <ServicesSection />
-      <ProcessSection />
-      <TestimonialsSection />
       <TrustSection />
+      <ServicesSection />
+      <TestimonialsSection />
+      <ProcessSection />
       <FaqSection />
       <Footer />
       <ChatWidget />

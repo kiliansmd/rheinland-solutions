@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronRight, Phone, ArrowRight } from "lucide-react"
+import { Menu, X, ChevronRight, Mail, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
 
@@ -66,7 +66,7 @@ export function Header() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 sm:h-12">
-            <a href="#" className="flex items-center" aria-label="RheinlandSolutions - Zur Startseite">
+            <a href="#" className="flex items-center" aria-label="Rheinland Solutions - Zur Startseite">
               <Logo variant={isScrolled ? "light" : "default"} size="sm" />
             </a>
 
@@ -109,14 +109,14 @@ export function Header() {
             {/* Mobile Actions */}
             <div className="flex items-center gap-2 lg:hidden">
               <a
-                href="tel:+4912345678900"
+                href="mailto:info@rheinland-solutions.de"
                 className={cn(
                   "p-2 rounded-full transition-all duration-300",
                   isScrolled ? "text-secondary-foreground bg-white/10" : "text-white bg-white/10",
                 )}
-                aria-label="Anrufen"
+                aria-label="E-Mail schreiben"
               >
-                <Phone className="w-5 h-5" />
+                <Mail className="w-5 h-5" />
               </a>
 
               {/* Mobile Menu Button */}
@@ -221,12 +221,12 @@ export function Header() {
               </a>
             </Button>
             <a
-              href="tel:+4912345678900"
+              href="mailto:info@rheinland-solutions.de"
               className="flex items-center justify-center gap-2 text-secondary-foreground/60 py-2 text-sm hover:text-secondary-foreground transition-colors"
               tabIndex={isMobileMenuOpen ? 0 : -1}
             >
-              <Phone className="w-4 h-4" />
-              +49 123 456 789 00
+              <Mail className="w-4 h-4" />
+              info@rheinland-solutions.de
             </a>
           </div>
         </nav>
