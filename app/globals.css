@@ -164,32 +164,21 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  /* Anti-bounce: prevent elastic scrolling */
-  overscroll-behavior: none;
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-bottom: env(safe-area-inset-bottom);
-  min-height: 100%;
   min-height: 100dvh;
-  /* Anti-bounce: Chrome, Firefox, Edge, Safari */
-  overscroll-behavior: none;
-  /* Prevent pull-to-refresh */
-  overscroll-behavior-y: contain;
-  overflow-x: clip;
+  overflow-x: hidden;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
 }
 ::selection { background: var(--consulting-yellow); color: var(--consulting-ink); }
-
-/* Safari-specific anti-bounce */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: auto;
-  }
-}
 
 section[id] {
   scroll-margin-top: 80px;
