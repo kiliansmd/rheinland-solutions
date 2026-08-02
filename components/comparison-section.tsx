@@ -20,7 +20,7 @@ const comparisonData = {
     ],
   },
   with: {
-    title: "Mit RheinlandSolutions",
+    title: "Mit Rheinland Solutions",
     subtitle: "Ihr Geschäft wächst automatisch",
     icon: TrendingUp,
     items: [
