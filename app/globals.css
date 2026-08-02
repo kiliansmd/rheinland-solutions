@@ -161,11 +161,13 @@
 /* Enhanced performance and smoothness */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   min-height: 100%;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 body {
@@ -174,7 +176,7 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
   min-height: 100dvh;
   overflow-x: hidden;
-  overscroll-behavior-y: auto;
+  overscroll-behavior: none;
   touch-action: pan-y pinch-zoom;
   -webkit-overflow-scrolling: touch;
 }
@@ -568,10 +570,7 @@ header .bg-gold svg { color: var(--consulting-yellow); }
 #ablauf .grid.lg\:grid-cols-3 > div:nth-child(2) > div { border-top-color: var(--consulting-ink); }
 
 footer { background: var(--consulting-yellow) !important; color: var(--consulting-ink) !important; border-top: 0; }
-footer::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 7rem; background: var(--consulting-ink); clip-path: polygon(0 0, 100% 0, 100% 25%, 62% 100%, 0 35%); }
 footer [class*="text-secondary-foreground"] { color: rgb(16 18 63 / .75) !important; }
-footer > div:first-child { background: var(--consulting-ink); color: white; }
-footer > div:first-child [class*="text-secondary-foreground"] { color: rgb(255 255 255 / .68) !important; }
 footer .bg-gold { background: var(--consulting-yellow) !important; }
 footer .bg-primary { background: var(--consulting-ink) !important; color: white !important; }
 footer a:hover { color: var(--consulting-ink) !important; }
@@ -638,7 +637,6 @@ footer a:hover { color: var(--consulting-ink) !important; }
   section:has([data-slot="accordion"]) [data-slot="accordion-item"] { padding-inline: 1rem; border-radius: 0; }
   section:has([data-slot="accordion"]) [data-slot="accordion-trigger"] { padding-block: 1.1rem; font-size: .95rem; }
 
-  footer > div:first-child .container { padding-top: 5rem; padding-bottom: 5rem; }
 }
 
 @media (max-width: 639px) {
@@ -661,18 +659,6 @@ footer a:hover { color: var(--consulting-ink) !important; }
   .hero-copy p { margin-top: 1rem; }
   .hero-copy > div:last-child { margin-top: 1.25rem; }
   .hero-copy > div:last-child > a:last-child { display: none; }
-}
-
-@media (max-width: 639px) {
-  .hero-copy { padding-block: 1.25rem; }
-  .hero-copy > div:first-child { margin-bottom: 1rem; }
-  .hero-copy p { margin-top: 1.5rem; }
-  .hero-copy > div:last-child { margin-top: 2rem; }
-}
-
-@media (max-height: 620px) and (max-width: 1023px) {
-  .hero-copy p { margin-top: 1rem; }
-  .hero-copy > div:last-child { margin-top: 1.25rem; }
 }
 
 @keyframes marquee {
