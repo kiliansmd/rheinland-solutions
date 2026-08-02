@@ -805,8 +805,9 @@ section:has([data-slot="accordion"]) [data-slot="accordion-item"]:first-child {
 footer {
   background: var(--consulting-ink) !important;
   color: #f8f8f2 !important;
-  border-top: 6px solid var(--consulting-yellow);
+  border-top: 0;
 }
+.footer-logo-bar { background: var(--consulting-yellow); }
 footer [class*="text-secondary-foreground"] { color: rgb(248 248 242 / .68) !important; }
 footer h3 { color: var(--consulting-yellow) !important; }
 footer a:hover { color: #fff !important; }
