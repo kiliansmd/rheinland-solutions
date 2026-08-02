@@ -1,35 +1,19 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, DM_Serif_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { PreventOverscroll } from "@/components/prevent-overscroll"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  preload: true,
-})
-
-const dmSerifDisplay = DM_Serif_Display({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-dm-serif",
-  display: "swap",
-  preload: true,
-})
-
 export const metadata: Metadata = {
-  title: "Digitalisierung, Prozess-Beratung & Schulungen | RheinlandSolutions",
+  title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
   description:
     "Ihr Partner für digitale Transformation: Individuelle Beratung, Prozessoptimierung und praxisnahe Schulungen. Über 100 erfolgreiche Projekte. Jetzt unverbindlich anfragen!",
   keywords:
-    "Digitalisierung, Prozessberatung, Schulungen, digitale Transformation, Unternehmensberatung, Change Management, Prozessoptimierung, RheinlandSolutions, Deutschland",
-  authors: [{ name: "RheinlandSolutions" }],
-  creator: "RheinlandSolutions",
-  publisher: "RheinlandSolutions",
+    "Digitalisierung, Prozessberatung, Schulungen, digitale Transformation, Unternehmensberatung, Change Management, Prozessoptimierung, Rheinland Solutions, Deutschland",
+  authors: [{ name: "Rheinland Solutions" }],
+  creator: "Rheinland Solutions",
+  publisher: "Rheinland Solutions",
   robots: {
     index: true,
     follow: true,
@@ -49,15 +33,15 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Digitalisierung, Prozess-Beratung & Schulungen | RheinlandSolutions",
+    title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
     description: "Ihr Partner für digitale Transformation und Prozessoptimierung. Über 100 erfolgreiche Projekte deutschlandweit.",
     type: "website",
     locale: "de_DE",
-    siteName: "RheinlandSolutions",
+    siteName: "Rheinland Solutions",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digitalisierung, Prozess-Beratung & Schulungen | RheinlandSolutions",
+    title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
     description: "Ihr Partner für digitale Transformation und Prozessoptimierung.",
   },
   alternates: {
@@ -67,7 +51,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#1a2744",
+  themeColor: "#efff00",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -81,18 +65,26 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="de" className={`${inter.variable} ${dmSerifDisplay.variable}`} suppressHydrationWarning>
+    <html lang="de" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "RheinlandSolutions",
+              "@type": "ProfessionalService",
+              "name": "Rheinland Solutions",
               "description": "Ihr Partner für Digitalisierung, Prozess-Beratung und Schulungen",
               "url": "https://rheinlandsolutions.de",
               "logo": "https://rheinlandsolutions.de/images/logo-dark.png",
+              "founder": "Kevin Müller",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Spitzwegstraße 23A",
+                "postalCode": "42719",
+                "addressLocality": "Solingen",
+                "addressCountry": "DE"
+              },
               "contactPoint": {
                 "@type": "ContactPoint",
                 "email": "info@rheinland-solutions.de",
