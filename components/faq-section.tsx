@@ -109,7 +109,7 @@ export function FaqSection() {
             <div className="flex flex-wrap items-center justify-center gap-4 mb-5">
               <div className="flex items-center gap-2 text-success">
                 <Shield className="w-5 h-5" />
-                <span className="text-sm font-semibold">100% Zufriedenheitsgarantie</span>
+                <span className="text-sm font-semibold">Verbindliche Beratung</span>
               </div>
               <div className="hidden sm:block w-px h-5 bg-border" />
               <div className="flex items-center gap-2 text-primary">
