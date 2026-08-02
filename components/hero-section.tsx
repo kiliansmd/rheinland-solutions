@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section id="demo" className="hero-modern relative min-h-screen flex items-center bg-[#efff00] text-[#10123f]">
+    <>
+    <section id="demo" className="hero-modern relative flex items-center bg-[#efff00] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -33,7 +34,7 @@ export function HeroSection() {
         <div className="absolute inset-0 hero-grid" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-28 pb-16 sm:pt-36 sm:pb-20 lg:py-40">
+      <div className="hero-container container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="hero-layout grid lg:grid-cols-12 gap-10 lg:gap-16 items-start lg:items-center">
           {/* Left Content */}
           <div className="hero-copy lg:col-span-7 lg:pr-10">
@@ -46,21 +47,30 @@ export function HeroSection() {
             </div>
 
             <h1 className="font-display text-[2rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.05] tracking-[-0.02em]">
-              Digitalisierung{" "}
-              <span className="text-gold italic">mit Strategie.</span>
+              Digitalisierung, die{" "}
+              <span className="text-gold italic">wirkt.</span>
             </h1>
 
             <p className="mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
-              Wir begleiten Sie bei der digitalen Transformation: Prozess-Beratung, Digitalisierung und Schulungen – individuell auf Ihr Unternehmen zugeschnitten.
+              Von der klaren Strategie bis zur wirksamen Umsetzung: Wir vereinfachen Prozesse, schaffen digitale Lösungen und befähigen Ihr Team.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:mt-14">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-12 sm:mt-14">
               <Button
                 asChild
-                className="bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
+                className="hero-primary-cta lg:hidden bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
               >
-                <a href="#kontakt" className="flex items-center gap-3">
+                <a href="#mobile-anfrage" className="flex items-center gap-3">
+                  Projekt anfragen
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </Button>
+              <Button
+                asChild
+                className="hero-primary-cta hidden lg:inline-flex bg-[#10123f] hover:bg-[#20245d] text-white font-bold h-13 px-8 text-[11px] uppercase tracking-[0.2em] rounded-none"
+              >
+                <a href="#kontakt" className="hidden lg:flex items-center gap-3">
                   Projekt anfragen
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
@@ -79,12 +89,18 @@ export function HeroSection() {
           </div>
 
           {/* Right - Interactive Form */}
-          <div className="hero-form lg:col-span-5 w-full lg:translate-y-12">
+          <div className="hero-form hidden lg:block lg:col-span-5 w-full">
             <InteractiveLeadForm />
           </div>
         </div>
       </div>
       <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
+    <section id="mobile-anfrage" className="hero-mobile-form lg:hidden" aria-label="Projektanfrage">
+      <div className="container mx-auto px-4 sm:px-6">
+        <InteractiveLeadForm />
+      </div>
+    </section>
+    </>
   )
 }

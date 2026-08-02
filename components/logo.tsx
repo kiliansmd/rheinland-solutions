@@ -24,7 +24,7 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
         alt="Rheinland Solutions"
         width={sizes[size].width}
         height={sizes[size].height}
-        className="object-contain brightness-0"
+        className={cn("object-contain brightness-0", variant === "light" && "invert")}
         decoding="async"
       />
     </div>

@@ -1,25 +1,12 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Award, Shield, Users, Star, CheckCircle2, Zap, Heart, MapPin } from "lucide-react"
+import { Award, Shield, CheckCircle2, Zap, Heart } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-const logos = [
-  { name: "Weber Industrie GmbH" },
-  { name: "Hoffmann & Partner" },
-  { name: "Braun Logistik AG" },
-  { name: "Schneider Consulting" },
-  { name: "Meyer Technologies" },
-  { name: "Fischer Group" },
-  { name: "Wagner Solutions" },
-  { name: "Becker Digital" },
-]
 
 const awards = [
   { icon: Award, label: "Zertifizierte Berater", value: "100%", subtext: "qualifiziert", color: "text-gold" },
   { icon: Shield, label: "Datenschutz", value: "100%", subtext: "DSGVO-konform", color: "text-success" },
-  { icon: Star, label: "Kundenbewertung", value: "4.9/5", subtext: "auf Google", color: "text-gold" },
-  { icon: Users, label: "Erfolgreiche Projekte", value: "100+", subtext: "zufriedene Kunden", color: "text-primary" },
 ]
 
 const guarantees = [
@@ -51,7 +38,7 @@ export function TrustSection() {
         {/* Awards Grid */}
         <div
           className={cn(
-            "trust-editorial__stats grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-12 transition-all duration-700",
+            "trust-editorial__stats grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mb-12 transition-all duration-700",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
           )}
         >
@@ -87,30 +74,6 @@ export function TrustSection() {
               <span className="text-sm font-medium text-secondary">{guarantee.text}</span>
             </div>
           ))}
-        </div>
-
-        {/* Client Logos Marquee */}
-        <div
-          className={cn(
-            "transition-all duration-700 delay-300",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
-          )}
-        >
-          <p className="text-center text-sm text-muted-foreground mb-6">
-            Vertrauen von über <strong className="text-secondary">100 Unternehmen</strong> deutschlandweit
-          </p>
-          <div className="relative overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10" />
-            <div className="flex gap-8 animate-marquee">
-              {[...logos, ...logos].map((logo, index) => (
-                <div key={index} className="flex items-center gap-2 bg-muted/50 rounded-xl px-4 py-3 shrink-0">
-                  <MapPin className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">{logo.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -9,12 +9,7 @@ import {
   MapPin,
   Linkedin,
   Instagram,
-  Facebook,
-  ArrowRight,
   CheckCircle2,
-  Heart,
-  Clock,
-  Shield,
 } from "lucide-react"
 import { Logo } from "@/components/logo"
 
@@ -29,46 +24,6 @@ export function Footer() {
 
   return (
     <footer id="kontakt" className="bg-secondary text-secondary-foreground relative overflow-hidden">
-      {/* CTA Section with Video Background */}
-      <div className="border-b border-white/5 relative">
-        {/* Video Background - Desktop only */}
-        <div className="absolute inset-0 z-0 overflow-hidden hidden lg:block">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
-          >
-            <source src="/videos/rhein.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32 relative z-10">
-          <div className="max-w-lg mx-auto text-center">
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="w-16 h-px bg-gold/50" />
-              <span className="text-[10px] uppercase tracking-[0.3em] text-secondary-foreground/40">Kontakt</span>
-              <div className="w-16 h-px bg-gold/50" />
-            </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal mb-6 tracking-[-0.02em]">
-              Starten Sie Ihr Projekt
-            </h2>
-            <p className="text-secondary-foreground/40 text-[15px] mb-12 max-w-sm mx-auto leading-relaxed">
-              Persönlich, kompetent und verbindlich.
-            </p>
-            <Button
-              asChild
-              className="bg-gold hover:bg-gold/90 text-secondary font-medium h-12 px-8 text-[11px] uppercase tracking-[0.2em] transition-all duration-300"
-            >
-              <a href="#demo" className="flex items-center gap-3">
-                Kontakt aufnehmen
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14 relative">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
@@ -104,7 +59,6 @@ export function Footer() {
               {[
                 { href: "#leistungen", label: "Leistungen" },
                 { href: "#ablauf", label: "Ablauf" },
-                { href: "#referenzen", label: "Referenzen" },
                 { href: "#kontakt", label: "Kontakt" },
               ].map((link) => (
                 <li key={link.label}>
