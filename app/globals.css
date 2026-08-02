@@ -166,8 +166,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   min-height: 100%;
-  overflow-x: hidden;
-  overscroll-behavior: none;
+  /* Stop page-edge chaining without constraining scrolling inside the page. */
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -175,10 +175,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-bottom: env(safe-area-inset-bottom);
   min-height: 100dvh;
-  overflow-x: hidden;
-  overscroll-behavior: none;
-  touch-action: pan-y pinch-zoom;
-  -webkit-overflow-scrolling: touch;
 }
 ::selection { background: var(--consulting-yellow); color: var(--consulting-ink); }
 
