@@ -261,7 +261,7 @@ function BrowserMockup({
                     "bg-gray-50 rounded-lg p-1.5 sm:p-3 text-center transition-all",
                     i === 0 && "ring-2 shadow-md scale-105",
                   )}
-                  style={i === 0 ? { ringColor: `${industry.color}40` } : {}}
+                  style={i === 0 ? { boxShadow: `0 0 0 2px ${industry.color}40` } : undefined}
                 >
                   <div
                     className="w-5 h-5 sm:w-8 sm:h-8 mx-auto mb-1 sm:mb-1.5 rounded-lg flex items-center justify-center"
