@@ -11,7 +11,6 @@ import { Logo } from "@/components/logo"
 const navLinks = [
   { href: "#leistungen", label: "Leistungen" },
   { href: "#ablauf", label: "Ablauf" },
-  { href: "#referenzen", label: "Referenzen" },
   { href: "#kontakt", label: "Kontakt" },
 ]
 
@@ -67,7 +66,7 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 sm:h-12">
             <a href="#" className="flex items-center" aria-label="Rheinland Solutions - Zur Startseite">
-              <Logo variant={isScrolled ? "light" : "default"} size="sm" />
+              <Logo variant="default" size="sm" />
             </a>
 
             {/* Desktop Nav */}
@@ -167,7 +166,7 @@ export function Header() {
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <Logo variant="default" size="sm" />
+          <Logo variant="light" size="sm" />
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 rounded-full text-secondary-foreground hover:bg-white/10 transition-colors"

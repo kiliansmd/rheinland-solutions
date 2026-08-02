@@ -101,20 +101,20 @@ export function ServicesSection() {
 
         {/* Service Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white/5 rounded-lg p-1 border border-white/10">
+          <div className="service-tabs inline-grid grid-cols-3 bg-white/5 rounded-lg p-1 border border-white/10">
             {services.map((service, index) => (
               <button
                 key={service.title}
                 onClick={() => setActiveService(index)}
                 className={cn(
-                  "flex items-center gap-2 px-4 sm:px-6 py-3 rounded-md font-medium transition-all duration-300 text-sm",
+                  "flex items-center justify-center gap-2 px-3 sm:px-6 py-3 rounded-md font-medium transition-all duration-300 text-sm",
                   activeService === index
                     ? "bg-primary text-primary-foreground"
                     : "text-secondary-foreground/60 hover:text-secondary-foreground"
                 )}
               >
                 <service.icon className="w-4 h-4" />
-                <span className="hidden sm:inline">{service.title}</span>
+                <span>{service.title}</span>
               </button>
             ))}
           </div>
@@ -132,7 +132,7 @@ export function ServicesSection() {
             >
               <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 {/* Left - Icon & Visual */}
-                <div className="flex justify-center">
+                <div className="service-visual flex justify-center">
                   <div className="relative">
                     <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-primary/10 flex items-center justify-center">
                       <service.icon className="w-20 h-20 sm:w-28 sm:h-28 text-primary" />
