@@ -376,6 +376,11 @@ body {
 .container { max-width: 1280px; }
 
 .glass-dark { background: oklch(0.2 0.008 85 / .93); border-bottom: 1px solid oklch(1 0 0 / .1); backdrop-filter: blur(18px); }
+.hero-screenshot {
+  height: 100dvh;
+  overflow: hidden;
+}
+.hero-screenshot .hero-modern { height: 100%; }
 .hero-modern { isolation: isolate; border-bottom: 8px solid var(--gold); overflow: hidden; }
 .hero-modern::before { content: ""; position: absolute; z-index: 1; width: 32vw; aspect-ratio: 1; right: -12vw; top: -9vw; border: 1px solid oklch(1 0 0 / .2); transform: rotate(45deg); box-shadow: 0 0 0 5vw oklch(1 0 0 / .025), 0 0 0 10vw oklch(1 0 0 / .02); }
 .hero-modern::after { content: ""; position: absolute; z-index: 1; right: 0; bottom: -1px; width: 35vw; height: 8px; background: white; }
@@ -712,6 +717,64 @@ footer a:hover { color: var(--consulting-ink) !important; }
   .hero-copy a { width: 100%; justify-content: center; }
 
   .service-tabs span { overflow-wrap: anywhere; }
+}
+
+/* Keep the mobile first viewport focused and free of clipped hero content. */
+@media (max-width: 1023px) {
+  .hero-screenshot .hero-modern,
+  .hero-screenshot .hero-container {
+    height: 100%;
+  }
+
+  .hero-screenshot .hero-container {
+    box-sizing: border-box;
+    justify-content: center;
+    padding-top: max(5.5rem, calc(4.5rem + env(safe-area-inset-top)));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .hero-screenshot .hero-copy {
+    padding-block: 0;
+  }
+
+  .hero-screenshot .hero-eyebrow {
+    display: none;
+  }
+
+  .hero-screenshot .hero-modern h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 8.7vw, 2.75rem);
+    line-height: .96;
+    overflow-wrap: normal;
+  }
+
+  .hero-screenshot .hero-title-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .hero-screenshot .hero-intro {
+    margin-top: clamp(1.25rem, 4vh, 2rem);
+    font-size: clamp(.9rem, 3.8vw, 1rem);
+    line-height: 1.5;
+  }
+
+  .hero-screenshot .hero-actions {
+    gap: .75rem;
+    margin-top: clamp(1.5rem, 4vh, 2.25rem);
+  }
+
+  .hero-screenshot .hero-actions a {
+    min-height: 3.25rem;
+  }
+
+  .hero-mobile-form.hero-mobile-form {
+    padding-top: 0;
+  }
+
+  .site-header {
+    padding-block: .75rem !important;
+  }
 }
 
 @media (max-height: 620px) and (max-width: 1023px) {
