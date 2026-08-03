@@ -46,8 +46,8 @@ export function HeroSection() {
             </div>
 
             <h1 className="font-display text-[2rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.05] tracking-[-0.02em]">
-              Digitalisierung, die{" "}
-              <span className="text-gold italic">wirkt.</span>
+              <span className="hero-title-line">Digitalisierung,</span>{" "}
+              <span>die <span className="text-gold italic">wirkt.</span></span>
             </h1>
 
             <p className="hero-intro mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">

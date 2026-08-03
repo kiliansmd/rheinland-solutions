@@ -728,8 +728,9 @@ footer a:hover { color: var(--consulting-ink) !important; }
 
   .hero-screenshot .hero-container {
     box-sizing: border-box;
-    padding-top: max(6.25rem, calc(5rem + env(safe-area-inset-top)));
-    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+    justify-content: center;
+    padding-top: max(5.5rem, calc(4.5rem + env(safe-area-inset-top)));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
 
   .hero-screenshot .hero-copy {
@@ -742,9 +743,14 @@ footer a:hover { color: var(--consulting-ink) !important; }
 
   .hero-screenshot .hero-modern h1 {
     max-width: 100%;
-    font-size: clamp(2.25rem, 10.2vw, 3.25rem);
+    font-size: clamp(2rem, 8.7vw, 2.75rem);
     line-height: .96;
     overflow-wrap: normal;
+  }
+
+  .hero-screenshot .hero-title-line {
+    display: block;
+    white-space: nowrap;
   }
 
   .hero-screenshot .hero-intro {
@@ -766,10 +772,8 @@ footer a:hover { color: var(--consulting-ink) !important; }
     padding-top: 0;
   }
 
-  .hero-mobile-form .hero-mobile-proof {
-    margin-top: 0;
-    margin-bottom: 2.5rem;
-    padding-top: 2.5rem;
+  .site-header {
+    padding-block: .75rem !important;
   }
 }
 
