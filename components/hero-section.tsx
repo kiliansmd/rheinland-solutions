@@ -86,14 +86,6 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="hero-mobile-proof lg:hidden" aria-label="Unser Ansatz">
-              <p>Von Solingen aus. Für Unternehmen, die Veränderung umsetzen wollen.</p>
-              <ul>
-                <li><span>01</span> Klar analysieren</li>
-                <li><span>02</span> Praktisch umsetzen</li>
-                <li><span>03</span> Teams befähigen</li>
-              </ul>
-            </div>
           </div>
 
           {/* Right - Interactive Form */}
@@ -111,6 +103,14 @@ export function MobileHeroForm() {
   return (
     <section id="mobile-anfrage" className="hero-mobile-form lg:hidden" aria-label="Projektanfrage">
       <div className="container mx-auto px-4 sm:px-6">
+        <div className="hero-mobile-proof" aria-label="Unser Ansatz">
+          <p>Von Solingen aus. Für Unternehmen, die Veränderung umsetzen wollen.</p>
+          <ul>
+            <li><span>01</span> Klar analysieren</li>
+            <li><span>02</span> Praktisch umsetzen</li>
+            <li><span>03</span> Teams befähigen</li>
+          </ul>
+        </div>
         <InteractiveLeadForm />
       </div>
     </section>
