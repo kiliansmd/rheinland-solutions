@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <>
     <section id="demo" className="hero-modern relative flex items-center bg-[#efff00] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
@@ -105,11 +104,15 @@ export function HeroSection() {
       </div>
       <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
+  )
+}
+
+export function MobileHeroForm() {
+  return (
     <section id="mobile-anfrage" className="hero-mobile-form lg:hidden" aria-label="Projektanfrage">
       <div className="container mx-auto px-4 sm:px-6">
         <InteractiveLeadForm />
       </div>
     </section>
-    </>
   )
 }
