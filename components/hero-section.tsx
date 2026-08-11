@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <>
-    <section id="demo" className="hero-modern relative flex items-center bg-[#efff00] text-[#10123f]">
+    <section id="demo" className="hero-modern relative flex items-center bg-[#f1e613] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
       <div className="hero-visual absolute inset-0 z-0 overflow-hidden">
@@ -47,8 +46,8 @@ export function HeroSection() {
             </div>
 
             <h1 className="font-display text-[2rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.05] tracking-[-0.02em]">
-              Digitalisierung, die{" "}
-              <span className="text-gold italic">wirkt.</span>
+              <span className="hero-title-line">Digitalisierung,</span>{" "}
+              <span>die <span className="text-gold italic">wirkt.</span></span>
             </h1>
 
             <p className="hero-intro mt-8 sm:mt-10 text-[15px] sm:text-base md:text-lg text-[#10123f]/75 leading-relaxed max-w-lg">
@@ -87,14 +86,6 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="hero-mobile-proof lg:hidden" aria-label="Unser Ansatz">
-              <p>Von Solingen aus. Für Unternehmen, die Veränderung umsetzen wollen.</p>
-              <ul>
-                <li><span>01</span> Klar analysieren</li>
-                <li><span>02</span> Praktisch umsetzen</li>
-                <li><span>03</span> Teams befähigen</li>
-              </ul>
-            </div>
           </div>
 
           {/* Right - Interactive Form */}
@@ -105,11 +96,15 @@ export function HeroSection() {
       </div>
       <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
+  )
+}
+
+export function MobileHeroForm() {
+  return (
     <section id="mobile-anfrage" className="hero-mobile-form lg:hidden" aria-label="Projektanfrage">
       <div className="container mx-auto px-4 sm:px-6">
         <InteractiveLeadForm />
       </div>
     </section>
-    </>
   )
 }
