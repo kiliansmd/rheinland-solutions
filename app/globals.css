@@ -44,7 +44,7 @@
   --success: oklch(0.5 0.08 170);
 
   /* Subtle accent - warm gold for highlights */
-  --gold: oklch(0.94 0.23 114);
+  --gold: #f1e613;
   --purple: oklch(0.45 0.06 280);
 
   --chart-1: var(--primary);
@@ -485,9 +485,9 @@ footer { border-top: 10px solid var(--consulting-ink); }
 
 /* 2026 light-yellow consultancy direction */
 :root {
-  --consulting-yellow: #efff00;
-  --consulting-yellow-hover: #ddeb00;
-  --consulting-yellow-light: #f8ffd2;
+  --consulting-yellow: #f1e613;
+  --consulting-yellow-hover: #f1e613;
+  --consulting-yellow-light: #f1e613;
   --consulting-ink: #10123f;
   --consulting-ink-soft: #20245d;
   --consulting-paper: #fcfdf7;
@@ -535,7 +535,7 @@ header .bg-gold svg { color: var(--consulting-yellow); }
 .hero-modern::after { width: 28%; height: 11rem; background: linear-gradient(110deg, var(--consulting-ink), var(--consulting-ink-soft)); right: 0; bottom: 0; clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%); }
 .hero-modern > div:nth-of-type(2) { opacity: 1; }
 .hero-modern video, .hero-modern img { width: 47% !important; left: auto !important; right: 0; opacity: .2; filter: grayscale(1) contrast(1.1); }
-.hero-modern .from-secondary\/95 { background: linear-gradient(90deg, var(--consulting-yellow) 0 50%, rgb(239 255 0 / .94) 62%, rgb(239 255 0 / .4) 100%) !important; }
+.hero-modern .from-secondary\/95 { background: linear-gradient(90deg, var(--consulting-yellow) 0 50%, rgb(241 230 19 / .94) 62%, rgb(241 230 19 / .4) 100%) !important; }
 .hero-grid { opacity: .2; background-size: 48px 48px; background-image: linear-gradient(rgb(23 25 22 / .12) 1px, transparent 1px), linear-gradient(90deg, rgb(23 25 22 / .12) 1px, transparent 1px); mask-image: linear-gradient(90deg, transparent, black); }
 .hero-modern .text-white { color: var(--consulting-ink) !important; }
 .hero-modern .hero-primary-cta,
@@ -650,7 +650,7 @@ footer a:hover { color: var(--consulting-ink) !important; }
   }
   .hero-layout { width: 100%; }
   .hero-modern video, .hero-modern img { width: 100% !important; opacity: .08; }
-  .hero-modern .from-secondary\/95 { background: rgb(239 255 0 / .9) !important; }
+  .hero-modern .from-secondary\/95 { background: rgb(241 230 19 / .9) !important; }
   .hero-modern::before, .hero-modern::after { display: none; }
   .hero-form { transform: none; margin-bottom: 2rem; }
   .hero-form > * { box-shadow: 8px 8px 0 var(--consulting-ink) !important; }
@@ -787,9 +787,9 @@ footer a:hover { color: var(--consulting-ink) !important; }
 
 /* Final editorial polish: calm proportions, precise rules, no decorative depth. */
 :root {
-  --consulting-yellow: #e8f51c;
-  --consulting-yellow-hover: #d6e30d;
-  --consulting-yellow-light: #f4f7dc;
+  --consulting-yellow: #f1e613;
+  --consulting-yellow-hover: #f1e613;
+  --consulting-yellow-light: #f1e613;
   --consulting-ink: #171936;
   --consulting-ink-soft: #2d3157;
   --consulting-paper: #f8f8f2;

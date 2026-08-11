@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section id="demo" className="hero-modern relative flex items-center bg-[#efff00] text-[#10123f]">
+    <section id="demo" className="hero-modern relative flex items-center bg-[#f1e613] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
       {/* Background Video (Desktop) / Image (Mobile) */}
       <div className="hero-visual absolute inset-0 z-0 overflow-hidden">

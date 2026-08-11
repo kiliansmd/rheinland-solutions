@@ -115,7 +115,7 @@ export function GoogleBusinessSection() {
                 <div className="bg-gray-100 px-3 sm:px-4 py-2 sm:py-3 border-b border-gray-200 flex items-center gap-2 sm:gap-3">
                   <div className="flex gap-1 sm:gap-1.5">
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400" />
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400" />
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#f1e613]" />
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-400" />
                   </div>
                   <div className="flex-1 flex items-center gap-2 bg-white rounded-full px-3 py-1 sm:py-1.5 border">
@@ -138,7 +138,7 @@ export function GoogleBusinessSection() {
                       <div className="flex items-center gap-1 mt-1">
                         <div className="flex">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
+                            <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-[#f1e613] text-[#f1e613]" />
                           ))}
                         </div>
                         <span className="text-xs sm:text-sm font-medium text-gray-700 ml-1">4.9</span>
@@ -238,7 +238,7 @@ export function GoogleBusinessSection() {
                             <span className="font-medium text-gray-900 text-xs sm:text-sm">{review.name}</span>
                             <div className="flex ml-auto">
                               {[...Array(review.rating)].map((_, j) => (
-                                <Star key={j} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-yellow-400 text-yellow-400" />
+                                <Star key={j} className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-[#f1e613] text-[#f1e613]" />
                               ))}
                             </div>
                           </div>

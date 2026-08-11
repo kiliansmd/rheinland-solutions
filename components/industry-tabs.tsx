@@ -165,7 +165,7 @@ function BrowserMockup({
         <div className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 bg-secondary border-b border-white/10">
           <div className="flex gap-1.5" aria-hidden="true">
             <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400" />
-            <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400" />
+            <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#f1e613]" />
             <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-400" />
           </div>
           <div className="flex-1 mx-2 sm:mx-4">
@@ -242,7 +242,7 @@ function BrowserMockup({
                 <div className="flex items-center gap-1 text-white/90">
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="w-2 h-2 sm:w-3 sm:h-3 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="w-2 h-2 sm:w-3 sm:h-3 fill-[#f1e613] text-[#f1e613]" />
                     ))}
                   </div>
                   <span className="text-[8px] sm:text-[10px]">4.9</span>
