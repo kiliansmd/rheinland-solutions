@@ -26,9 +26,10 @@ export function Footer() {
               <h3 className="text-xs uppercase tracking-[0.15em] text-secondary-foreground/50 mb-5">Schnellzugriff</h3>
               <ul className="space-y-2.5">
                 {[
-                  { href: "#leistungen", label: "Leistungen" },
-                  { href: "#ablauf", label: "Ablauf" },
-                  { href: "#kontakt", label: "Kontakt" },
+                  { href: "/#leistungen", label: "Leistungen" },
+                  { href: "/secure-data-collection", label: "Secure Data Collection" },
+                  { href: "/#ablauf", label: "Ablauf" },
+                  { href: "/#kontakt", label: "Kontakt" },
                 ].map((link) => (
                   <li key={link.label}>
                     <a
