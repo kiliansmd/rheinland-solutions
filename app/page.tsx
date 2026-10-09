@@ -8,17 +8,17 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <>
-        <Header />
     <main id="main" className="min-h-screen min-h-dvh">
+      <div className="hero-screenshot">
+        <Header />
         <HeroSection />
+      </div>
       <MobileHeroForm />
       <TrustSection />
       <ServicesSection />
       <ProcessSection />
       <FaqSection />
-    </main>
       <Footer />
-    </>
+    </main>
   )
 }
