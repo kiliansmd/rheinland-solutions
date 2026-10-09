@@ -26,8 +26,8 @@ export function Footer() {
               <h3 className="text-xs uppercase tracking-[0.15em] text-secondary-foreground/50 mb-5">Schnellzugriff</h3>
               <ul className="space-y-2.5">
                 {[
-                  { href: "/#leistungen", label: "Leistungen" },
-                  { href: "/business-solutions", label: "Business Solutions" },
+                  { href: "/#leistungen", label: "Beratung & Projekte" },
+                  { href: "/business-solutions", label: "Unternehmenssoftware" },
                   { href: "https://essentials.rheinland-solutions.de/", label: "Essentials · kostenlose Werkzeuge" },
                   { href: "/#ablauf", label: "Ablauf" },
                   { href: "/#kontakt", label: "Kontakt" },

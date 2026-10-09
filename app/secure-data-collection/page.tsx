@@ -28,7 +28,7 @@ export default function SecureDataCollectionPage() {
     <>
       <Header />
       <main id="main">
-        <nav aria-label="Secure Data Collection" className="container mx-auto px-5 sm:px-6 lg:px-8 pt-7 flex flex-wrap items-center justify-between gap-4"><a href="/business-solutions" className="brand-link">Business Solutions</a><a href={secureDataLinks.login} className="brand-button-outline">Admin-Login</a></nav>
+        <nav aria-label="Secure Data Collection" className="container mx-auto px-5 sm:px-6 lg:px-8 pt-7 flex flex-wrap items-center justify-between gap-4"><a href="/business-solutions" className="brand-link">Unternehmenssoftware</a><a href={secureDataLinks.login} className="brand-button-outline">Admin-Login</a></nav>
         <section className="collection-hero pt-12 pb-20 lg:pt-20 lg:pb-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.3fr_1fr] items-center gap-14 lg:gap-20">
             <div>
