@@ -10,6 +10,7 @@ const pages = await Promise.all(paths.map(async path => {
   return response.text()
 }))
 const [home, product, , , business] = pages
+assert.ok(!/Zertifizierte Berater|100% (?:DSGVO-konform|rechtssicher)|trust-editorial__stats/.test(home), "Homepage must not claim certification or absolute legal compliance")
 for (const html of pages) {
   const nav = html.match(/<nav[^>]*aria-label="Hauptnavigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1]
   assert.ok(nav, "Shared main navigation must exist")

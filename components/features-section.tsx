@@ -70,7 +70,7 @@ const features = [
   {
     icon: Search,
     title: "SEO & DSGVO",
-    description: "Gefunden werden auf Google und 100% rechtssicher bleiben",
+    description: "Sichtbarkeit bei Google verbessern und Datenschutzanforderungen berücksichtigen",
     highlighted: false,
   },
   {
