@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer"
 import { SecureDataTeaser } from "@/components/secure-data-teaser"
 
 export const metadata: Metadata = {
-  title: "Business Solutions | Rheinland Solutions",
+  title: "Unternehmenssoftware | Rheinland Solutions",
   description: "Betreute digitale Lösungen für dein Unternehmen. Entdecke Secure Data Collection und finde den passenden Service für deine Abläufe.",
   alternates: { canonical: "https://www.rheinland-solutions.de/business-solutions" },
 }
@@ -15,7 +15,7 @@ export default function BusinessSolutionsPage() {
     <main id="main" className="business-page">
       <section className="container mx-auto px-5 sm:px-6 lg:px-8 pt-14 pb-10">
         <p className="brand-eyebrow">Lösungen für deinen Betrieb</p>
-        <h1 className="brand-title mt-5">Business <em>Solutions.</em></h1>
+        <h1 className="brand-title mt-5">Unternehmens<wbr /><em>software.</em></h1>
         <p className="text-lg text-muted-foreground max-w-2xl mt-6">Digitale Services, die zu deinen Abläufen passen. Mit persönlicher Begleitung, klarem Leistungsumfang und einem Ansprechpartner für die Umsetzung.</p>
       </section>
       <SecureDataTeaser />

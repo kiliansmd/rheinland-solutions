@@ -3,20 +3,21 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronRight, Mail, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
 
 const navLinks = [
-  { href: "/#leistungen", label: "Leistungen" },
-  { href: "/business-solutions", label: "Business Solutions" },
-  { href: "https://essentials.rheinland-solutions.de/", label: "Essentials" },
-  { href: "/#ablauf", label: "Ablauf" },
-  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/#leistungen", label: "Beratung & Projekte", description: "Persönliche Dienstleistungen" },
+  { href: "/business-solutions", label: "Unternehmenssoftware", description: "Betreute Lösungen für deinen Betrieb" },
+  { href: "https://essentials.rheinland-solutions.de/", label: "Essentials", description: "Kostenlose Services" },
 ]
 
 export function Header() {
+  const pathname = usePathname()
+  const activeHref = pathname === "/" ? "/#leistungen" : ["/business-solutions", "/secure-data-collection"].includes(pathname) ? "/business-solutions" : null
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -81,6 +82,7 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
+                  aria-current={activeHref === link.href ? "true" : undefined}
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={cn(
                     "text-[13px] tracking-wide transition-all duration-300 relative group",
@@ -89,27 +91,11 @@ export function Header() {
                       : "text-white/50 hover:text-white",
                   )}
                 >
-                  {link.label}
-                  <span className={cn(
-                    "absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover:w-full",
-                    isScrolled ? "bg-secondary-foreground/30" : "bg-white/30"
-                  )} />
+                  <span className="division-label">{link.label}</span>
+                  <small className="division-description">{link.description}</small>
                 </a>
               ))}
             </nav>
-
-            {/* Desktop CTA */}
-            <div className="hidden lg:block">
-              <Button
-                asChild
-                className="site-header-cta bg-gold hover:bg-gold/90 text-secondary font-medium h-9 text-xs uppercase tracking-[0.15em] transition-opacity"
-              >
-                <a href="/#demo" onClick={(e) => handleNavClick(e, "/#demo")} className="flex items-center gap-2">
-                  Kontakt
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </Button>
-            </div>
 
             {/* Mobile Actions */}
             <div className="flex items-center gap-2 lg:hidden">
@@ -169,6 +155,7 @@ export function Header() {
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
         )}
         aria-hidden={!isMobileMenuOpen}
+        inert={!isMobileMenuOpen}
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between p-4 border-b border-white/10">
@@ -193,6 +180,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
+                aria-current={activeHref === link.href ? "true" : undefined}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={cn(
                   "text-secondary-foreground/80 hover:text-gold py-3 px-4 rounded-xl transition-all duration-300 hover:bg-white/5 text-base font-medium flex items-center justify-between group",
@@ -202,7 +190,7 @@ export function Header() {
                 style={{ transitionDelay: isMobileMenuOpen ? `${index * 50 + 100}ms` : "0ms" }}
                 tabIndex={isMobileMenuOpen ? 0 : -1}
               >
-                {link.label}
+                <span>{link.label}<small className="block text-xs font-normal mt-1">{link.description}</small></span>
                 <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-all" />
               </a>
             ))}

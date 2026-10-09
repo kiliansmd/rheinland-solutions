@@ -1594,7 +1594,13 @@ a:focus-visible,button:focus-visible { outline: 3px solid #3155c6; outline-offse
 body { font-family: var(--font-sans); background: #fff; }
 h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 400; }
 .site-header { background: #fff !important; }
-.site-header nav a { overflow-wrap: anywhere; }
+.site-header nav a { overflow-wrap: normal; }
+.site-header nav a .division-label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 0; }
+.site-header nav a .division-description { display: block; margin-top: 6px; font-size: 11px; line-height: 1.5; letter-spacing: 0; color: #555a77; font-weight: 400; }
+.site-header nav a::after { display: none; }
+.site-header nav a[aria-current="true"] { border-bottom: 3px solid #f1e613; }
+.site-header nav a:hover .division-label { text-decoration: underline; text-underline-offset: 4px; }
+@media(min-width:1024px) { .site-header { overflow-y: auto; } }
 .hero-modern { background: #fff; }
 .hero-modern::before { background: linear-gradient(145deg,transparent 0 16%,#f4f5fa 16% 23%,transparent 23%); }
 .hero-modern::after { background: #f4f5fa; }
