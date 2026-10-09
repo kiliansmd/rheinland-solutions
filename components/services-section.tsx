@@ -81,7 +81,7 @@ export function ServicesSection() {
                 isVisible ? "w-12" : "w-0"
               )} 
             />
-            <span className="text-xs uppercase tracking-[0.2em] text-secondary-foreground/50 font-medium">
+            <span className="text-xs uppercase tracking-[0.2em] text-foreground/50 font-medium">
               Dienstleistungen
             </span>
             <div 
@@ -91,17 +91,17 @@ export function ServicesSection() {
               )} 
             />
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-secondary-foreground">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground">
             Unsere Expertise
           </h2>
-          <p className="text-secondary-foreground/60 mt-5 text-base sm:text-lg max-w-xl mx-auto">
+          <p className="text-foreground/60 mt-5 text-base sm:text-lg max-w-xl mx-auto">
             Individuelle Beratung und Umsetzung für Ihr Unternehmen.
           </p>
         </div>
 
         {/* Service Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="service-tabs inline-grid grid-cols-3 bg-white/5 rounded-lg p-1 border border-white/10">
+          <div className="service-tabs inline-grid grid-cols-3 bg-muted rounded-lg p-1 border border-border">
             {services.map((service, index) => (
               <button
                 key={service.title}
@@ -110,7 +110,7 @@ export function ServicesSection() {
                   "flex items-center justify-center gap-2 px-3 sm:px-6 py-3 rounded-md font-medium transition-all duration-300 text-sm",
                   activeService === index
                     ? "bg-primary text-primary-foreground"
-                    : "text-secondary-foreground/60 hover:text-secondary-foreground"
+                    : "text-foreground/60 hover:text-foreground"
                 )}
               >
                 <service.icon className="w-4 h-4" />
@@ -137,7 +137,7 @@ export function ServicesSection() {
                     <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-primary/10 flex items-center justify-center">
                       <service.icon className="w-20 h-20 sm:w-28 sm:h-28 text-primary" />
                     </div>
-                    <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-white/5 border border-white/10" />
+                    <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-muted border border-border" />
                     <div className="absolute -bottom-6 -left-6 w-16 h-16 rounded-full bg-primary/20" />
                   </div>
                 </div>
@@ -147,10 +147,10 @@ export function ServicesSection() {
                   <span className="text-gold text-sm font-medium uppercase tracking-wider">
                     {service.subtitle}
                   </span>
-                  <h3 className="font-display text-3xl sm:text-4xl font-normal text-secondary-foreground mt-2 mb-4">
+                  <h3 className="font-display text-3xl sm:text-4xl font-normal text-foreground mt-2 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-secondary-foreground/70 text-base leading-relaxed mb-8">
+                  <p className="text-foreground/70 text-base leading-relaxed mb-8">
                     {service.description}
                   </p>
 
@@ -160,7 +160,7 @@ export function ServicesSection() {
                         <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 text-primary-foreground" />
                         </div>
-                        <span className="text-secondary-foreground/80 text-sm">{benefit}</span>
+                        <span className="text-foreground/80 text-sm">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -185,7 +185,7 @@ export function ServicesSection() {
           "mt-16 text-center transition-all duration-700 delay-300",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}>
-          <p className="text-secondary-foreground/50 text-sm">
+          <p className="text-foreground/50 text-sm">
             Jedes Projekt ist einzigartig. Kontaktieren Sie uns für ein individuelles Angebot.
           </p>
         </div>

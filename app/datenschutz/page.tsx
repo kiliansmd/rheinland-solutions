@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
     <main className="min-h-screen bg-background">
       <Header />
       
-      <article className="pt-32 pb-20">
+      <article id="main" className="pt-12 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           {/* Back Link */}
           <Link 

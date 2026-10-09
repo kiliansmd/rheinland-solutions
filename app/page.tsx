@@ -5,22 +5,20 @@ import { ProcessSection } from "@/components/process-section"
 import { TrustSection } from "@/components/trust-section"
 import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
-import { SecureDataTeaser } from "@/components/secure-data-teaser"
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-h-dvh">
-      <div className="hero-screenshot">
+    <>
         <Header />
+    <main id="main" className="min-h-screen min-h-dvh">
         <HeroSection />
-      </div>
       <MobileHeroForm />
       <TrustSection />
       <ServicesSection />
-      <SecureDataTeaser />
       <ProcessSection />
       <FaqSection />
-      <Footer />
     </main>
+      <Footer />
+    </>
   )
 }

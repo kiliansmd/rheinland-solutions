@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { ArrowRight, Check, Database, FileInput, LockKeyhole, Users } from "lucide-react"
-import { Logo } from "@/components/logo"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { secureDataLinks } from "@/lib/secure-data"
 
@@ -26,29 +26,20 @@ const benefits = [
 export default function SecureDataCollectionPage() {
   return (
     <>
-      <a href="#inhalt" className="sr-only focus:not-sr-only focus:block focus:p-4">Zum Inhalt springen</a>
-      <header className="border-t-[6px] border-gold bg-secondary text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-center justify-between gap-5">
-          <a href="/" aria-label="Rheinland Solutions – Startseite"><Logo variant="light" size="md" /></a>
-          <nav aria-label="Service-Navigation" className="flex flex-wrap items-center gap-6 text-sm">
-            <a href="#angebot" className="hover:text-gold">Angebot</a>
-            <a href="#ablauf" className="hover:text-gold">So funktioniert’s</a>
-            <a href={secureDataLinks.login} className="border border-white/40 px-4 py-2 hover:border-gold hover:text-gold">Admin-Login</a>
-          </nav>
-        </div>
-      </header>
-      <main id="inhalt">
-        <section className="bg-secondary text-white pt-12 pb-20 lg:pt-20 lg:pb-28">
+      <Header />
+      <main id="main">
+        <nav aria-label="Secure Data Collection" className="container mx-auto px-5 sm:px-6 lg:px-8 pt-7 flex flex-wrap items-center justify-between gap-4"><a href="/business-solutions" className="brand-link">Business Solutions</a><a href={secureDataLinks.login} className="brand-button-outline">Admin-Login</a></nav>
+        <section className="collection-hero pt-12 pb-20 lg:pt-20 lg:pb-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.3fr_1fr] items-center gap-14 lg:gap-20">
             <div>
               <p className="text-gold uppercase tracking-[0.18em] text-xs mb-6">Rheinland Solutions · Business Service</p>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">Secure Data<br />Collection<span className="text-gold">.</span></h1>
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05]">Secure Data<br /><em className="not-italic bg-[linear-gradient(transparent_65%,#f1e613_65%)]">Collection.</em></h1>
               <p className="text-2xl mt-8 leading-snug">Informationen erfassen.<br />Sicher weiterkommen.</p>
               <p className="mt-5 text-white/80 text-lg leading-relaxed max-w-xl">Schluss mit verstreuten Angaben in E-Mails und Tabellen. Sammle die Informationen, die dein Unternehmen braucht – mit eigenen Formularen, geschützten Zugängen und einem klaren Weg zur weiteren Nutzung.</p>
               <a href="#angebot" className="inline-flex items-center gap-3 mt-8 bg-gold text-secondary px-6 py-4 font-medium hover:opacity-90">Angebot ansehen <ArrowRight aria-hidden="true" className="size-4" /></a>
               <p className="text-sm text-white/70 mt-4">Ab 250 € netto pro Monat · zuzüglich Umsatzsteuer</p>
             </div>
-            <div className="border border-white/20 bg-white/5 p-7 sm:p-10">
+            <div className="collection-summary p-7 sm:p-10">
               <div className="flex items-center gap-3 text-gold mb-8"><LockKeyhole aria-hidden="true" className="size-5" /><p className="text-sm">Deine Informationen. Dein Ablauf.</p></div>
               {[
                 ["01", "Individuell erfassen", "Du bestimmst die Fragen und Felder."],
@@ -86,7 +77,7 @@ export default function SecureDataCollectionPage() {
               <p className="mt-6 leading-relaxed">Speicherdauer, Löschung, Betreuung und Anbindungen vereinbaren wir passend zu deinem Auftrag. Individuelle Einrichtung und besondere Anforderungen werden im Angebot gesondert ausgewiesen.</p>
               <p className="mt-6 text-sm text-muted-foreground">Für Unternehmen. Vertragslaufzeit und Leistungsumfang werden vor der Beauftragung vereinbart.</p>
             </div>
-            <div className="bg-secondary text-white border-t-4 border-gold p-8 sm:p-10">
+            <div className="collection-pricing p-8 sm:p-10">
               <p className="text-gold text-sm mb-3">Secure Data Collection</p>
               <p className="font-display text-5xl">Ab 250 €</p>
               <p className="text-white/75 mt-3">netto / Monat, zuzüglich Umsatzsteuer</p>
