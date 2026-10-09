@@ -94,7 +94,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="hero-coordinate" aria-hidden="true"><span>51.170° N</span><span>07.084° E</span></div>
     </section>
   )
 }

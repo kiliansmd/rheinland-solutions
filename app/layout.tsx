@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
+import "./layout-polish.css"
 
 export const metadata: Metadata = {
   title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",

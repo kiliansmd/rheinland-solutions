@@ -1,0 +1,68 @@
+/* Shared, content-led spacing. No viewport-height hero or empty stats reserve. */
+:root { --rs-page-gutter: clamp(20px, 3vw, 40px); --rs-section-space: clamp(40px, 5vw, 72px); }
+.hero-screenshot,
+.hero-screenshot .hero-modern,
+.hero-screenshot .hero-container { height: auto; min-height: 0; }
+.hero-screenshot { overflow: clip; }
+.hero-screenshot .hero-container { padding-block: clamp(40px, 5vw, 72px); }
+.hero-layout { width: 100%; min-width: 0; gap: clamp(24px, 3vw, 48px); }
+.hero-layout > * { min-width: 0; }
+.hero-copy { padding-block: 16px; }
+.hero-copy::before { top: 0; bottom: 0; }
+.hero-form { padding-block: 0; transform: none; }
+.hero-modern::after { display: none; }
+.hero-modern h1 { font-size: clamp(40px, 4.6vw, 72px); overflow-wrap: normal; }
+.hero-actions { flex-wrap: wrap; }
+.hero-actions a { white-space: normal; text-align: center; }
+.trust-editorial { padding-block: 0 32px !important; }
+.trust-editorial > .container { transform: none; }
+.trust-editorial .trust-editorial__guarantees { margin: 0 !important; padding: 20px; gap: 12px; }
+#leistungen { clip-path: none; margin-top: 0; padding-block: var(--rs-section-space); }
+#ablauf, section:has([data-slot="accordion"]) { padding-block: var(--rs-section-space); }
+.collection-hero { padding-block: var(--rs-section-space); }
+.collection-hero > .container { gap: 32px; }
+.business-card { gap: 28px; }
+.business-card > *, .collection-hero > .container > * { min-width: 0; }
+.business-page h1, article#main h1 { overflow-wrap: anywhere; }
+article#main { padding-block: var(--rs-section-space); }
+article#main h1 { margin-bottom: 32px; }
+article#main a, footer a { overflow-wrap: anywhere; }
+footer .container { padding-block: 28px; }
+.site-header nav a { line-height: 1.5; }
+.site-header a, .site-header button { min-height: 44px; }
+@media (min-width: 1024px) {
+  html { scroll-padding-top: 24px; }
+  .hero-screenshot .hero-container { padding-inline: var(--rs-page-gutter); }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+  .hero-copy, .hero-form { grid-column: auto; }
+  .hero-copy { padding-right: 0; }
+  .hero-form { padding-left: 20px; }
+  .hero-copy::before { right: -12px; }
+  .hero-modern h1 { font-size: 40px; }
+  .hero-actions { flex-direction: column; margin-top: 28px; }
+  .hero-actions a { width: 100%; padding-inline: 12px; }
+  .collection-hero > .container { grid-template-columns: 1fr; }
+}
+@media (max-width: 1023px) {
+  .hero-screenshot .hero-container { padding-top: 112px; padding-bottom: 32px; }
+  .hero-screenshot .hero-copy { padding-block: 0; }
+  .hero-screenshot .hero-actions { margin-top: 28px; }
+  .hero-mobile-form { padding-block: 24px 32px; }
+  .trust-editorial { padding-block: 0 28px !important; }
+  .business-page { padding-top: 88px; }
+  body > main > nav[aria-label="Secure Data Collection"] { padding-top: 112px; }
+  article#main { padding-top: 112px; }
+  .site-header .lg\:hidden { color: #10123f; }
+  .site-header .lg\:hidden > a, .site-header .lg\:hidden > button { color: #10123f; min-width: 44px; }
+}
+@media (max-width: 639px) {
+  .hero-modern h1 { font-size: clamp(34px, 8.5vw, 48px); }
+  .hero-screenshot .hero-actions a { font-size: 11px; letter-spacing: .1em; }
+  .trust-editorial__guarantees > div { width: 100%; }
+  .business-card, .brand-note { padding: 22px; }
+  .collection-hero h1 { font-size: clamp(34px, 9vw, 48px); }
+  .collection-summary { padding: 24px; }
+  .brand-title { font-size: clamp(32px, 9vw, 48px); }
+}
