@@ -10,6 +10,7 @@ import { Logo } from "@/components/logo"
 
 const navLinks = [
   { href: "#leistungen", label: "Leistungen" },
+  { href: "/secure-data-collection", label: "Secure Data" },
   { href: "#ablauf", label: "Ablauf" },
   { href: "#kontakt", label: "Kontakt" },
 ]
@@ -38,6 +39,10 @@ export function Header() {
   }, [isMobileMenuOpen])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith("#")) {
+      setIsMobileMenuOpen(false)
+      return
+    }
     e.preventDefault()
     const targetId = href.replace("#", "")
     const element = document.getElementById(targetId)

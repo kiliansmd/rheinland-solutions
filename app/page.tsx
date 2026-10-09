@@ -5,6 +5,7 @@ import { ProcessSection } from "@/components/process-section"
 import { TrustSection } from "@/components/trust-section"
 import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
+import { SecureDataTeaser } from "@/components/secure-data-teaser"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <MobileHeroForm />
       <TrustSection />
       <ServicesSection />
+      <SecureDataTeaser />
       <ProcessSection />
       <FaqSection />
       <Footer />
