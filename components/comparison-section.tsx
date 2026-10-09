@@ -29,7 +29,7 @@ const comparisonData = {
       { text: "Karriereportal bringt Bewerbungen", highlight: true },
       { text: "Sie werden zur ersten Wahl", highlight: false },
       { text: "Online-Buchung spart 5+ Stunden/Woche", highlight: true },
-      { text: "100% DSGVO-konform", highlight: false },
+      { text: "Datenschutz bei der Umsetzung berücksichtigen", highlight: false },
     ],
   },
 }
