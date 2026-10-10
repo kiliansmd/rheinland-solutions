@@ -9,7 +9,7 @@ export type ArticleSection = {
 export type Article = {
   number: number
   slug: string
-  category: "Zuhause" | "Daten & Überblick" | "Im Betrieb"
+  category: "Zuhause" | "Daten & Überblick" | "Im Betrieb" | "Websites & Schnittstellen" | "Einfach digital"
   title: string
   description: string
   lead: string

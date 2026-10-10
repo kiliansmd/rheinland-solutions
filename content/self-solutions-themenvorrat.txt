@@ -1,0 +1,147 @@
+SELF SOLUTIONS · by Rheinland Solutions
+Themenvorrat für weitere Beiträge · Stand: 10. Oktober 2026
+
+Redaktionelle Leitlinie
+Mit einer Alltagssituation beginnen, den Nutzen zeigen, Begriffe direkt erklären.
+Anschließend ein überschaubarer Selbstversuch, erkennbare Grenzen und ein
+passendes Unterstützungsangebot. Kein künstliches Verkomplizieren, keine
+erfundenen Kundenerfolge. Einsteiger werden angesprochen, nicht vorgeführt.
+
+Die folgenden Titel sind IDEEN, noch keine fertigen oder veröffentlichten
+Anleitungen. „Projektbezug“ bezeichnet belegte Themenfelder aus den bisherigen
+Arbeiten, nicht den Nachweis, dass jeder hier vorgeschlagene Ablauf schon
+produktiv umgesetzt oder vollständig getestet wurde.
+
+PRIORITÄT 1 · KLEINE PROBLEME, SCHNELLER NUTZEN
+
+1. Wo ist meine heruntergeladene Datei geblieben?
+   Nutzen: Downloads, Speicherorte und Dateiendungen verstehen; weniger suchen.
+   Format: kurzer Selbstversuch mit einer künstlichen Datei.
+   Einordnung: neue Grundlagenidee.
+
+2. PDF zusammenfügen, verkleinern oder aufteilen: Was brauche ich wann?
+   Nutzen: Unterlagen passend versenden, ohne unnötige Programme zu installieren.
+   Projektbezug: Essentials-PDF-Werkzeuge; aktuelle Funktionen vorab prüfen.
+
+3. Screenshot oder Originaldatei: Was verschicke ich eigentlich?
+   Nutzen: lesbare Informationen teilen und unnötige persönliche Angaben vermeiden.
+   Einordnung: neue Grundlagenidee, mit selbst erstellten Beispielen.
+
+4. Link teilen oder Datei anhängen: Was ist der Unterschied?
+   Nutzen: Zugriffe, Aktualität und zusätzliche Kopien bewusster handhaben.
+   Projektbezug: gemeinsame Boards und Dokumentenabläufe; Anbieterrechte prüfen.
+
+5. QR-Code für Gäste, Speisekarte oder Kontakt: So bleibt das Ziel richtig.
+   Nutzen: Informationen einfach zugänglich machen und tote Links vermeiden.
+   Projektbezug: Essentials-QR-Werkzeug; statische und dynamische Codes trennen.
+
+6. Ist diese E-Mail echt? Ein ruhiger Prüfweg ohne vorschnellen Klick.
+   Nutzen: verdächtige Nachrichten besser einordnen und unabhängig nachfragen.
+   Einordnung: neue Sicherheits-Grundlagenidee; aktuelle Primärquellen nötig.
+
+7. Warum Updates wichtig sind – und was du vorher sichern solltest.
+   Nutzen: weniger Unsicherheit bei Updates, klarer Rückweg statt Wegklicken.
+   Projektbezug: Server- und Website-Betrieb; Anleitung pro System eingrenzen.
+
+8. Ein Foto verkleinern, ohne es unbrauchbar zu machen.
+   Nutzen: passende Dateigröße für Website, Mail oder Formular erreichen.
+   Projektbezug: Essentials-Bildwerkzeuge; Qualität und Datenschutz unterscheiden.
+
+PRIORITÄT 2 · NETZWERK UND ZUHAUSE VERSTEHEN
+
+9. Ein eigenes WLAN für Gäste: praktisch, aber was wird wirklich getrennt?
+   Nutzen: Besucher verbinden, ohne unnötigen Zugriff aufs Heimnetz zu geben.
+   Einordnung: neue konkrete Anleitung; Routermodell und Isolation testen.
+
+10. Von unterwegs auf den Homeserver: Zugang, ohne alles öffentlich zu machen.
+    Nutzen: eigene Dienste erreichbar machen, ohne pauschale Portfreigaben.
+    Projektbezug: Homeserver; Fernzugang muss separat geplant und geprüft werden.
+
+11. Router, Switch, Access Point: Welches Kästchen macht eigentlich was?
+    Nutzen: verständliche Einkaufsliste statt doppelt gekaufter Geräte.
+    Einordnung: Grundlagen aus dem Netzwerk-Themenfeld.
+
+12. Warum findet mein Handy den Drucker nicht?
+    Nutzen: Netzzugehörigkeit, Gast-WLAN und Gerätesuche systematisch prüfen.
+    Einordnung: neue Alltagsidee; keine fertige Fehlerdiagnose behaupten.
+
+13. Smarte Geräte im eigenen Netz: Trennung verstehen, ohne das Haus lahmzulegen.
+    Nutzen: Zugriffe begrenzen und notwendige Verbindungen bewusst zulassen.
+    Einordnung: vertiefende Netzwerkidee; VLANs nicht als Ein-Klick-Lösung zeigen.
+
+14. Ein richtiger Taster statt ständig das Handy: Smart Home für alle Bewohner.
+    Nutzen: vertraute Bedienung und sinnvolle manuelle Rückwege.
+    Projektbezug: vorhandene Taster- und Zustandslogik; nur freigegebene Beispiele.
+
+15. Was passiert mit meinem Smart Home, wenn das Internet ausfällt?
+    Nutzen: lokale Funktionen, Cloud-Abhängigkeiten und Rückwege unterscheiden.
+    Projektbezug: Home Assistant; geplante Offline-Tests pro Integration.
+
+16. Melden statt nerven: Benachrichtigungen, die du wirklich beachten willst.
+    Nutzen: wichtige Hinweise von wiederholtem Meldungsrauschen trennen.
+    Projektbezug: Sensorik und Automatisierung; keine Schutzsysteme ersetzen.
+
+PRIORITÄT 3 · DATEN UND PROGRAMME SINNVOLL VERBINDEN
+
+17. Webhook oder regelmäßige Abfrage: Wann soll ein Ablauf starten?
+    Nutzen: Ereignisse schneller verarbeiten, ohne unnötig ständig nachzufragen.
+    Projektbezug: Integrationen; eigenes künstliches Testsystem verwenden.
+
+18. Warum landet dieselbe Anfrage zweimal im System?
+    Nutzen: Wiederholungen und doppelte Verarbeitung verstehen und vermeiden.
+    Projektbezug: API- und Formularabläufe; Fehlerversuche nachvollziehbar zeigen.
+
+19. API-Schlüssel, Passwort und „Mit Microsoft anmelden“: Nicht dasselbe.
+    Nutzen: Benutzeranmeldung und technische Zugänge auseinanderhalten.
+    Einordnung: Grundlagenidee; geplantes Microsoft-SSO nicht als fertig darstellen.
+
+20. Die Schnittstelle ist ausgefallen. Wo sind meine Daten jetzt?
+    Nutzen: offene Übertragungen, Wiederholungen und Zuständigkeiten sichtbar machen.
+    Projektbezug: Datenerfassung; keinen verlustfreien Betrieb ungeprüft versprechen.
+
+21. Fehlermeldungen verstehen: Was du dem Support wirklich schicken solltest.
+    Nutzen: schneller helfen lassen, ohne Zugangsdaten oder Kundendaten mitzuschicken.
+    Projektbezug: Server- und Website-Fehlersuche; anonymisierte künstliche Beispiele.
+
+22. CSV ist nicht gleich Excel: Warum Umlaute und Spalten manchmal verrutschen.
+    Nutzen: Exporte richtig öffnen und Vollständigkeit kontrollieren.
+    Projektbezug: Secure-Data-Export und Auswertungen; Daten nur künstlich.
+
+23. OCR einfach erklärt: Wie aus einem Scan ein durchsuchbares Dokument wird.
+    Nutzen: Unterlagen wiederfinden und Erkennungsfehler realistisch einordnen.
+    Projektbezug: Paperless und OCR; kein fehlerfreies Lesen versprechen.
+
+24. Privat oder geschäftlich? Dokumente ordentlich trennen, bevor es unübersichtlich wird.
+    Nutzen: klare Zuständigkeit, Ablage und Rechte statt irreführender Ordnernamen.
+    Projektbezug: Mail- und Dokumentenablage; keine Daten anderer Firmen verwenden.
+
+PRIORITÄT 4 · WEBSITE UND ZUSAMMENARBEIT WEITERDENKEN
+
+25. Meine Änderung ist online, aber ich sehe sie nicht: Cache einfach erklärt.
+    Nutzen: Browser, Website-Version und Zwischenspeicher auseinanderhalten.
+    Projektbezug: Veröffentlichungen; kontrollierte Tests ohne wahlloses Löschen.
+
+26. Eine Vorschau ist nicht automatisch privat.
+    Nutzen: Testlinks, Zugriffsschutz und versehentliche Veröffentlichung verstehen.
+    Projektbezug: Website-Vorschauen und Freigaben.
+
+27. Gemeinsam am Whiteboard: Wer kann den Link öffnen und was passiert nach 30 Tagen?
+    Nutzen: Zusammenarbeit mit bewusstem Zugriff und klarer Lebensdauer.
+    Projektbezug: Essentials-Boards; aktuelle Löschlogik vor Veröffentlichung prüfen.
+
+28. Lokal im Browser verarbeitet: Was bedeutet das für meine Dateien?
+    Nutzen: Dateiverarbeitung, Serverzugriff und technische Verbindungsdaten trennen.
+    Projektbezug: Essentials-Dateiwerkzeuge; Aussage pro Werkzeug nachweisen.
+
+29. Ein Kontaktformular, das wirklich ankommt.
+    Nutzen: Anzeige, Versand, Eingang und Rückmeldung als zusammenhängenden Ablauf testen.
+    Projektbezug: Formulare und Secure Data; konkrete Produktgrenzen nennen.
+
+30. Ein Projekt sauber übergeben: Welche Zugänge und Unterlagen dir gehören sollten.
+    Nutzen: bei Website oder Homeserver handlungsfähig bleiben.
+    Projektbezug: Domain-, Hosting- und Serverbetrieb; keine Vertragsberatung ersetzen.
+
+EMPFOHLENE NÄCHSTE RUNDE
+Zuerst 1, 2, 5 und 11 als leicht zugängliche Kurzbeiträge.
+Danach 14, 23 und 29 als praxisnahe Brücke zu individuellen Dienstleistungen.
+Die vertiefenden API- und Netzwerkthemen erst mit reproduzierbarem Testaufbau.

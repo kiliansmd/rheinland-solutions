@@ -34,7 +34,7 @@ export default async function ArticlePage({ params }: Props) {
   return <><Header /><main id="main" className="journal-page journal-article-page">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <div className="journal-shell">
-      <nav className="journal-breadcrumb" aria-label="Brotkrumennavigation"><Link href="/">Startseite</Link><span aria-hidden="true">/</span><Link href="/blog">Praxis & Anleitungen</Link><span aria-hidden="true">/</span><span>{article.category}</span></nav>
+      <nav className="journal-breadcrumb" aria-label="Brotkrumennavigation"><Link href="/">Startseite</Link><span aria-hidden="true">/</span><Link href="/blog">Self Solutions</Link><span aria-hidden="true">/</span><span>{article.category}</span></nav>
       <header className="journal-article-header"><p className="journal-eyebrow">{article.category} · Anleitung {String(article.number).padStart(2, "0")}</p><h1>{article.title}</h1><p className="journal-lead">{article.lead}</p><p className="journal-byline">Rheinland Solutions <span>·</span> <time dateTime={journalDate}>10. Oktober 2026</time> <span>·</span> {readingMinutes(article)} Min. Lesezeit</p></header>
       <div className="journal-article-layout">
         <aside className="journal-toc"><nav aria-label="In diesem Beitrag"><p>In diesem Beitrag</p><a href="#ergebnis">Das Ergebnis</a>{article.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}<a href="#pruefliste">Deine Prüfliste</a><a href="#unterstuetzung">Unterstützung</a></nav></aside>
@@ -47,7 +47,7 @@ export default async function ArticlePage({ params }: Props) {
           <section id="unterstuetzung" className="journal-cta"><p className="journal-eyebrow">Passend für deinen Alltag</p><h2>Du möchtest das auch?</h2><p>{article.service}</p><a className="journal-button" href={`mailto:info@rheinland-solutions.de?subject=${encodeURIComponent(`Anfrage zum Beitrag: ${article.title}`)}`}>Meine Umsetzung besprechen ↗</a><Link className="journal-text-link" href="/#leistungen">Beratung & Projekte kennenlernen</Link></section>
         </article>
       </div>
-      <section className="journal-related"><p className="journal-eyebrow">Der nächste sinnvolle Schritt</p><h2>Hier geht es weiter.</h2><div className="journal-grid">{related.map(item => <article key={item.slug} className="journal-card"><div className="journal-card-meta"><span>{item.category}</span><span>{readingMinutes(item)} Min.</span></div><h3><Link href={`/blog/${item.slug}`}>{item.title}</Link></h3><p>{item.description}</p><span className="journal-card-bottom" aria-hidden="true">Weiterlesen ↗</span></article>)}</div><Link className="journal-text-link" href="/blog">← Alle zwölf Anleitungen</Link></section>
+      <section className="journal-related"><p className="journal-eyebrow">Der nächste sinnvolle Schritt</p><h2>Hier geht es weiter.</h2><div className="journal-grid">{related.map(item => <article key={item.slug} className="journal-card"><div className="journal-card-meta"><span>{item.category}</span><span>{readingMinutes(item)} Min.</span></div><h3><Link href={`/blog/${item.slug}`}>{item.title}</Link></h3><p>{item.description}</p><span className="journal-card-bottom" aria-hidden="true">Weiterlesen ↗</span></article>)}</div><Link className="journal-text-link" href="/blog">← Alle {articles.length} Beiträge</Link></section>
     </div>
   </main><Footer /></>
 }
