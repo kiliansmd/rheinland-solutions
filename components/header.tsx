@@ -97,6 +97,8 @@ export function Header() {
               ))}
             </nav>
 
+            <a href="/blog" className="journal-nav-link" aria-current={pathname.startsWith("/blog") ? "page" : undefined}>Praxis & Anleitungen ↗</a>
+
             {/* Mobile Actions */}
             <div className="flex items-center gap-2 lg:hidden">
               <a
@@ -194,6 +196,7 @@ export function Header() {
                 <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-all" />
               </a>
             ))}
+            <a href="/blog" onClick={() => setIsMobileMenuOpen(false)} aria-current={pathname.startsWith("/blog") ? "page" : undefined} className="block px-4 py-4 mt-4 border-t border-white/10 text-sm" tabIndex={isMobileMenuOpen ? 0 : -1}>Praxis & Anleitungen ↗</a>
           </div>
 
           {/* Menu Footer CTA */}

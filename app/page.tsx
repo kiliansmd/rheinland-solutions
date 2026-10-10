@@ -5,6 +5,7 @@ import { ProcessSection } from "@/components/process-section"
 import { TrustSection } from "@/components/trust-section"
 import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
+import { JournalTeaser } from "@/components/journal-teaser"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <FaqSection />
+      <JournalTeaser />
       <Footer />
     </main>
   )
