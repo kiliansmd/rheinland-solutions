@@ -3,7 +3,7 @@ import type { Article } from "./types"
 export const dataArticles: Article[] = [
   {
     number: 5, slug: "dokumente-wiederfinden", category: "Daten & Überblick",
-    title: "Rechnungen wiederfinden, ohne Ordner zu durchsuchen.",
+    title: "Rechnungen und Schreiben mit Paperless wiederfinden",
     description: "Richte ein kleines Paperless-Archiv ein und entwickle eine Ablage, in der du Unterlagen auch Monate später wiederfindest.",
     lead: "Du erinnerst dich an den Inhalt, aber nicht an den Dateinamen. Genau hier hilft ein durchsuchbares Dokumentenarchiv. Statt immer feinerer Ordnerstrukturen brauchst du einen zuverlässigen Eingang, lesbare Dokumente und wenige eindeutige Merkmale.",
     result: "Ein lokales Paperless-Testarchiv mit zehn künstlichen Dokumenten, nachvollziehbaren Kategorien und einem geprüften Export.",
@@ -23,7 +23,7 @@ export const dataArticles: Article[] = [
   },
   {
     number: 6, slug: "wichtige-mails-archivieren", category: "Daten & Überblick",
-    title: "Wichtige E-Mails automatisch ablegen – den Rest draußen lassen.",
+    title: "Wichtige E-Mail-Anhänge automatisch ablegen",
     description: "Ein kontrollierter Dokumenteneingang aus dem Postfach: relevante Anhänge übernehmen und fehlende Importe sichtbar machen.",
     lead: "Ein Mailimport ist erst hilfreich, wenn du ihm vertrauen kannst. „Alles speichern“ erzeugt schnell ein zweites unübersichtliches Postfach. Zu strenge Regeln lassen wichtige Unterlagen verschwinden. Der bessere Einstieg ist ein kleiner, prüfbarer Prozess mit einem klaren Eingang und sichtbaren Ausnahmen.",
     result: "Ein getesteter Import ausgewählter Mailanhänge nach Paperless, ohne Originalnachrichten automatisch zu löschen.",
@@ -42,7 +42,7 @@ export const dataArticles: Article[] = [
   },
   {
     number: 7, slug: "energiekosten-verstehen", category: "Daten & Überblick",
-    title: "Was kostet mein Zuhause heute wirklich?",
+    title: "Stromkosten aus den eigenen Messdaten berechnen",
     description: "Aus Verbrauch, Solarstrom und Speicher wird eine nachvollziehbare Tagesübersicht – mit klaren Grenzen zwischen Messung und Schätzung.",
     lead: "Weniger Stromverbrauch bedeutet nicht automatisch geringere Tageskosten. Wenn weniger Solarstrom verfügbar ist oder mehr Energie aus dem Netz kommt, kann die Rechnung trotzdem steigen. Eine nützliche Übersicht zeigt deshalb nicht nur Kilowattstunden, sondern erklärt, woher die Kosten stammen.",
     result: "Eine selbst erstellte Tagesauswertung aus Messwerten und dokumentierten Preisannahmen. Noch keine automatische Steuerung von Heizung oder Speicher.",
@@ -61,7 +61,7 @@ export const dataArticles: Article[] = [
   },
   {
     number: 8, slug: "raumklima-verstehen", category: "Daten & Überblick",
-    title: "Erst messen, dann automatisieren: Was dein Haus dir verrät.",
+    title: "Raumklima messen und Werte richtig einordnen",
     description: "Temperatur, Feuchte und CO₂ sinnvoll beobachten: ein kleines Messprotokoll statt vorschneller Schlussfolgerungen.",
     lead: "Ein Sensorwert ist schnell angezeigt. Schwieriger ist die Frage, was er bedeutet. Ein bewegter Sensor, eine offene Tür oder eine ausgefallene Verbindung können ein Diagramm stärker verändern als deine letzte Einstellung. Gute Auswertung beginnt deshalb mit einem sauberen Messaufbau.",
     result: "Ein siebentägiges Messprotokoll für einen festen Standort, einschließlich Datenqualität und einem kontrollierten Vergleich.",
