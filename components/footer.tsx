@@ -30,7 +30,7 @@ export function Footer() {
                   { href: "/business-solutions", label: "Unternehmenssoftware" },
                   { href: "https://essentials.rheinland-solutions.de/", label: "Essentials · kostenlose Werkzeuge" },
                   { href: "/#ablauf", label: "Ablauf" },
-                  { href: "/blog", label: "Praxis & Anleitungen" },
+                  { href: "/blog", label: "Self Solutions · Wissen & Anleitungen" },
                   { href: "/#kontakt", label: "Kontakt" },
                 ].map((link) => (
                   <li key={link.label}>

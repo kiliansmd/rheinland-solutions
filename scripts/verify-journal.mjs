@@ -17,9 +17,9 @@ function load(file) {
   return module.exports
 }
 const { articles, articleSummaries, readingMinutes } = load("lib/journal/index.ts")
-assert.equal(articles.length, 12)
-assert.equal(new Set(articles.map(a => a.slug)).size, 12)
-assert.equal(articleSummaries.length, 12)
+assert.equal(articles.length, 22)
+assert.equal(new Set(articles.map(a => a.slug)).size, articles.length)
+assert.equal(articleSummaries.length, articles.length)
 for (const article of articles) {
   assert.ok(article.sections.length >= 4, article.slug)
   assert.ok(article.checklist.length >= 4, article.slug)
@@ -30,6 +30,22 @@ for (const article of articles) {
   for (const related of article.related) assert.ok(articles.some(a => a.slug === related), related)
   for (const section of article.sections) if (section.source) assert.equal(new URL(section.source.url).protocol, "https:")
 }
+
+const websiteExample = articles.find(a => a.slug === "weg-zur-eigenen-website").sections.find(s => s.code).code
+assert.match(websiteExample, /<!doctype html>/i)
+assert.match(websiteExample, /<html lang="de">/)
+assert.match(websiteExample, /name="viewport"/)
+assert.equal((websiteExample.match(/<h1>/g) || []).length, 1)
+assert.ok(websiteExample.includes('href="#kontakt"') && websiteExample.includes('id="kontakt"'))
+assert.doesNotMatch(websiteExample, /<script|<form|https?:\/\//i, "Local prototype has no third-party calls or pretend form")
+const apiExample = articles.find(a => a.slug === "website-api-anbindung").sections.find(s => s.code).code
+const syntax = spawnSync("/bin/sh", ["-n"], { input: apiExample, encoding: "utf8" })
+assert.equal(syntax.status, 0, syntax.stderr)
+const payload = JSON.parse(apiExample.match(/--data '([^']+)'/)[1])
+assert.deepEqual(payload, { anfrage_id: "demo-001", betreff: "Fiktiver Test" })
+assert.match(apiExample, /--max-time 20/)
+assert.doesNotMatch(apiExample, /--insecure/)
+console.log("PASS: local HTML example structure and API example shell/JSON syntax (no external POST sent)")
 
 // Execute the exact published example with artificial files only.
 const example = articles.find(a => a.slug === "bueroaufgaben-automatisieren").sections.find(s => s.code?.includes("import csv")).code
@@ -53,13 +69,17 @@ assert.notEqual(run(output).status, 0, "Must not overwrite existing report")
 assert.equal(fs.readFileSync(output, "utf8"), csv)
 assert.notEqual(run(path.join(source, "bericht.csv")).status, 0, "Output must stay outside source directory")
 assert.equal(fs.readFileSync(path.join(source, "Notiz.txt"), "utf8"), "Synthetic note")
-console.log("PASS: 12 article structures, related links, source URLs and runnable Python example (including safety cases)")
+console.log(`PASS: ${articles.length} article structures, related links, source URLs and runnable Python example (including safety cases)`)
 
 const base = process.argv[2]
 if (base) {
   const index = await fetch(new URL("/blog", base))
   assert.equal(index.status, 200)
   const indexHtml = await index.text()
+  assert.ok(indexHtml.includes("Self Solutions"))
+  assert.ok(indexHtml.includes("by Rheinland Solutions"))
+  assert.ok(indexHtml.includes('aria-label="Einfach anfangen"'))
+  assert.ok(indexHtml.includes("Einfach digital"))
   for (const article of articles) assert.ok(indexHtml.includes(`href="/blog/${article.slug}"`), `Index link: ${article.slug}`)
   for (const article of articles) {
     const response = await fetch(new URL(`/blog/${article.slug}`, base))
@@ -76,5 +96,5 @@ if (base) {
   }
   const missing = await fetch(new URL("/blog/diesen-beitrag-gibt-es-nicht", base))
   assert.equal(missing.status, 404)
-  console.log(`PASS: index, 12 article routes, metadata, table of contents, CTAs, related links and unknown-slug 404 against ${base}`)
+  console.log(`PASS: Self Solutions index, ${articles.length} article routes, metadata, table of contents, CTAs, related links and unknown-slug 404 against ${base}`)
 }
