@@ -3,7 +3,7 @@ import type { Article } from "./types"
 export const basicArticles: Article[] = [
   {
     number: 19, slug: "smart-home-was-ist-sinnvoll", category: "Zuhause",
-    title: "Smart Home ist mehr als Licht: Was dir im Alltag wirklich hilft.",
+    title: "Smart Home: Was außer Lichtsteuerung sinnvoll ist",
     description: "Weniger nachsehen, früher Bescheid wissen und Verbrauch verstehen: So findest du sinnvolle Anwendungen für dein Zuhause, ohne alles neu zu kaufen.",
     lead: "Das Licht per Handy einschalten ist möglich. Es ist aber nicht automatisch bequemer als der Schalter an der Wand. Wirklich interessant wird ein Smart Home dort, wo es dir Wege, Unsicherheit oder wiederkehrende Handgriffe abnimmt. Dafür muss nicht sofort das ganze Haus umgebaut werden.",
     result: "Eine persönliche Auswahl von drei sinnvollen Anwendungen und ein kleiner, überprüfbarer erster Versuch – ohne vorschnellen Großeinkauf.",
@@ -23,7 +23,7 @@ export const basicArticles: Article[] = [
   },
   {
     number: 20, slug: "wlan-langsam-einfach-pruefen", category: "Einfach digital",
-    title: "Volle WLAN-Balken, trotzdem langsam? So findest du die Ursache.",
+    title: "Guter WLAN-Empfang, trotzdem langsam?",
     description: "WLAN und Internet auseinanderhalten, Räume vergleichen und erst danach Geräte kaufen: ein einfacher Prüfweg ohne Fachchinesisch.",
     lead: "Das Video stockt, die Seite lädt langsam, aber das Handy zeigt guten Empfang. Das ist kein Widerspruch. Die Balken beschreiben nur einen Teil des Weges. Mit ein paar vergleichbaren Tests kannst du herausfinden, ob eher der Raum, ein Gerät oder der Internetanschluss auffällt.",
     result: "Ein kleines Messprotokoll und eine begründete nächste Maßnahme statt eines Repeater-Kaufs auf Verdacht.",
@@ -43,7 +43,7 @@ export const basicArticles: Article[] = [
   },
   {
     number: 21, slug: "cloud-ist-nicht-automatisch-backup", category: "Einfach digital",
-    title: "Meine Fotos sind in der Cloud. Brauche ich trotzdem ein Backup?",
+    title: "Cloud und Backup: Wann brauchst du eine zweite Sicherung?",
     description: "Warum eine zweite sichtbare Kopie nicht immer eine unabhängige Sicherung ist – und wie du mit drei Testdateien deinen Rückweg prüfst.",
     lead: "Du löschst ein Bild am Handy, und kurz darauf fehlt es auch am Computer. Genau das kann die vorgesehene Funktion einer Synchronisierung sein. Sie hält Geräte auf demselben Stand. Eine Sicherung soll dir dagegen auch einen früheren Stand zurückgeben können, wenn etwas versehentlich verschwindet.",
     result: "Ein verständlicher Überblick über deine wichtigen Dateien und ein erfolgreich geprüfter Wiederherstellungsweg für künstliche Testdaten.",
@@ -63,7 +63,7 @@ export const basicArticles: Article[] = [
   },
   {
     number: 22, slug: "passwoerter-einfach-sicher", category: "Einfach digital",
-    title: "Sichere Passwörter, ohne sie alle auswendig zu lernen.",
+    title: "Passwörter verwalten, ohne sie alle auswendig zu lernen",
     description: "Mit Passwortverwaltung, zusätzlicher Anmeldung und einem Wiederherstellungsplan Schritt für Schritt mehr Ordnung in deine Konten bringen.",
     lead: "Ein einziges Passwort für alles ist bequem – bis eines der Konten betroffen ist. Zwanzig komplizierte Passwörter im Kopf zu behalten ist allerdings auch kein brauchbarer Alltag. Eine passende Passwortverwaltung nimmt dir das Merken ab. Du musst vor allem verstehen, wie du sie schützt und im Notfall wieder erreichst.",
     result: "Eine geordnete Kontenübersicht und ein kontrolliert abgesicherter erster Zugang, ohne alle Anmeldungen auf einmal umzubauen.",

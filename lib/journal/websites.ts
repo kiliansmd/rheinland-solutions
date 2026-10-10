@@ -3,7 +3,7 @@ import type { Article } from "./types"
 export const websiteArticles: Article[] = [
   {
     number: 13, slug: "weg-zur-eigenen-website", category: "Websites & Schnittstellen",
-    title: "Deine eigene Website: Was du wirklich brauchst – und was erstmal nicht.",
+    title: "Deine erste Website: Domain, Hosting und Code",
     description: "Von einer klaren Idee zur ersten eigenen Seite: Verstehe Domain, Hosting und Code und baue einen kleinen Prototyp, bevor du Verträge abschließt.",
     lead: "Deine Website sollte eine einfache Frage beantworten: Warum sollte jemand gerade mit dir arbeiten? Dafür brauchst du zunächst weder einen Shop noch ein Kundenportal. Eine übersichtliche Seite mit einem verständlichen Angebot und einem klaren nächsten Schritt kann der bessere Start sein. Technik kommt hinzu, wenn sie diesem Ziel dient.",
     result: "Ein eigener, lokal im Browser laufender Website-Prototyp und eine überschaubare Liste der Bausteine für die Veröffentlichung.",
@@ -56,7 +56,7 @@ export const websiteArticles: Article[] = [
   },
   {
     number: 14, slug: "domain-richtig-verbinden", category: "Websites & Schnittstellen",
-    title: "Deine Adresse im Netz: Domain verbinden, ohne die Firmen-Mail lahmzulegen.",
+    title: "Eine Domain verbinden, ohne die Firmen-Mail zu stören",
     description: "Was Domain, DNS und Hosting verbindet – und wie du eine neue Website-Adresse testest, während bestehende E-Mails weiterlaufen.",
     lead: "Die Website zieht um, plötzlich kommen keine E-Mails mehr an. Dahinter steckt oft keine große technische Katastrophe, sondern eine zu großzügige Änderung an den Domaineinstellungen. Wer die Zuständigkeiten auseinanderhält, kann die neue Website gezielt verbinden und andere Dienste unangetastet lassen.",
     result: "Ein dokumentierter DNS-Änderungsplan und eine geprüfte Test-Subdomain, bevor du eine bestehende Firmenadresse umstellst.",
@@ -76,7 +76,7 @@ export const websiteArticles: Article[] = [
   },
   {
     number: 15, slug: "website-hosting-verstehen", category: "Websites & Schnittstellen",
-    title: "Der Code ist fertig. Warum ist deine Website noch nicht online?",
+    title: "Welches Hosting braucht deine Website?",
     description: "Welches Hosting zu welcher Website passt und wie du eine kleine HTML-Seite veröffentlichst – ohne gleich einen eigenen Server zu betreiben.",
     lead: "Eine Website auf deinem Rechner ist wie eine fertig gestaltete Broschüre auf deinem Schreibtisch: Sie existiert, aber deine Kunden können sie noch nicht erreichen. Hosting macht sie verfügbar. Welche Art du brauchst, hängt weniger vom Design ab als davon, was die Seite tatsächlich tun soll.",
     result: "Eine veröffentlichte, rein fiktive HTML-Testseite unter einer Anbieteradresse und ein Hosting-Plan, der zu deinen späteren Funktionen passt.",
@@ -96,7 +96,7 @@ export const websiteArticles: Article[] = [
   },
   {
     number: 16, slug: "website-mit-ki-erstellen", category: "Websites & Schnittstellen",
-    title: "Mit KI zur eigenen Website: schnell zum Entwurf, bewusst zur fertigen Lösung.",
+    title: "Eine Website mit KI erstellen und den Entwurf prüfen",
     description: "Ein brauchbarer Vibe-Coding-Ablauf: kleines Ziel, klare Vorgaben, nachvollziehbare Änderungen und Tests statt blindem Vertrauen in die Vorschau.",
     lead: "Du beschreibst deine Idee, und wenige Minuten später steht eine erste Seite. Das kann ein enormer Einstiegsvorteil sein. Die entscheidende Frage kommt danach: Funktioniert sie auch für Besucher, auf dem Handy und nach der nächsten Änderung? Mit einem klar begrenzten Auftrag wird KI zum hilfreichen Werkzeug statt zur Quelle ständig neuer Baustellen.",
     result: "Ein lokal überprüfbarer Website-Entwurf, ein wiederverwendbares Briefing und eine eigene Abnahmecheckliste für KI-generierte Änderungen.",
@@ -130,7 +130,7 @@ Erkläre separat, was vor einer geschäftlichen Veröffentlichung noch fehlt.` }
   },
   {
     number: 17, slug: "website-sicherheit", category: "Websites & Schnittstellen",
-    title: "HTTPS reicht nicht: Wie du deine Website alltagstauglich absicherst.",
+    title: "Website-Sicherheit: Konten, Dateien und Wiederherstellung",
     description: "Ein konkreter Sicherheits- und Betriebscheck für kleine Websites: Konten, veröffentlichte Dateien, Updates, Wiederherstellung und Zuständigkeiten.",
     lead: "Du musst nicht selbst zum Sicherheitsexperten werden, um bei deiner Website die richtigen Fragen zu stellen. Schon ein klarer Überblick über Konten, Dateien und Zuständigkeiten verhindert vermeidbare Probleme. Entscheidend ist, dass du nicht nur den heutigen Onlinezustand kennst, sondern auch den Weg zurück, wenn etwas schiefgeht.",
     result: "Eine dokumentierte Basisprüfung deiner eigenen Website und ein nachvollziehbarer Plan für Änderungen, Ausfälle und Wiederherstellung.",
@@ -150,7 +150,7 @@ Erkläre separat, was vor einer geschäftlichen Veröffentlichung noch fehlt.` }
   },
   {
     number: 18, slug: "website-api-anbindung", category: "Websites & Schnittstellen",
-    title: "Vom Formular direkt in dein System: Was eine API für dich erledigen kann.",
+    title: "Formulardaten über eine Schnittstelle weitergeben",
     description: "Informationen einmal erfassen und gezielt weitergeben: eine erste Schnittstellenanfrage ausprobieren und verstehen, was einen verlässlichen Ablauf ausmacht.",
     lead: "Eine neue Anfrage kommt über deine Website. Jemand kopiert sie in eine Tabelle und trägt sie danach ins nächste Programm ein. Eine Schnittstelle kann diese Übergaben vereinfachen. Der eigentliche Nutzen ist nicht „eine API“, sondern ein Ablauf, in dem Informationen vollständig ankommen und Fehler nicht unbemerkt bleiben.",
     result: "Eine nachvollziehbare Testanfrage an einen öffentlichen Echo-Dienst und ein Plan für die spätere Übergabe in dein eigenes Zielsystem.",

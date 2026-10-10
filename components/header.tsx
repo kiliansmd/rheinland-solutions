@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronRight, Mail, ArrowRight } from "lucide-react"
+import { Menu, X, Mail } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Logo } from "@/components/logo"
 
@@ -13,11 +13,12 @@ const navLinks = [
   { href: "/#leistungen", label: "Beratung & Projekte", description: "Persönliche Dienstleistungen" },
   { href: "/business-solutions", label: "Unternehmenssoftware", description: "Betreute Lösungen für deinen Betrieb" },
   { href: "https://essentials.rheinland-solutions.de/", label: "Essentials", description: "Kostenlose Services" },
+  { href: "/blog", label: "Self Solutions", description: "Wissen & Anleitungen" },
 ]
 
 export function Header() {
   const pathname = usePathname()
-  const activeHref = pathname === "/" ? "/#leistungen" : ["/business-solutions", "/secure-data-collection"].includes(pathname) ? "/business-solutions" : null
+  const activeHref = pathname === "/" ? "/#leistungen" : pathname === "/blog" || pathname.startsWith("/blog/") ? "/blog" : ["/business-solutions", "/secure-data-collection"].includes(pathname) ? "/business-solutions" : null
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -96,8 +97,6 @@ export function Header() {
                 </a>
               ))}
             </nav>
-
-            <a href="/blog" className="journal-nav-link" aria-current={pathname.startsWith("/blog") ? "page" : undefined}>Self Solutions ↗</a>
 
             {/* Mobile Actions */}
             <div className="flex items-center gap-2 lg:hidden">
@@ -193,10 +192,8 @@ export function Header() {
                 tabIndex={isMobileMenuOpen ? 0 : -1}
               >
                 <span>{link.label}<small className="block text-xs font-normal mt-1">{link.description}</small></span>
-                <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-all" />
               </a>
             ))}
-            <a href="/blog" onClick={() => setIsMobileMenuOpen(false)} aria-current={pathname.startsWith("/blog") ? "page" : undefined} className="block px-4 py-4 mt-4 border-t border-white/10 text-sm" tabIndex={isMobileMenuOpen ? 0 : -1}>Self Solutions ↗</a>
           </div>
 
           {/* Menu Footer CTA */}
@@ -213,7 +210,6 @@ export function Header() {
             >
               <a href="/#demo" onClick={(e) => handleNavClick(e, "/#demo")} tabIndex={isMobileMenuOpen ? 0 : -1}>
                 Erstgespräch vereinbaren
-                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </Button>
             <a

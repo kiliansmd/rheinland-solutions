@@ -14,8 +14,8 @@ assert.ok(!/Zertifizierte Berater|100% (?:DSGVO-konform|rechtssicher)|trust-edit
 for (const html of pages) {
   const nav = html.match(/<nav[^>]*aria-label="Hauptnavigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1]
   assert.ok(nav, "Shared main navigation must exist")
-  assert.equal((nav.match(/<a\s/g) || []).length, 3, "Exactly three divisions")
-  for (const label of ["Beratung &amp; Projekte", "Unternehmenssoftware", "Essentials", "Kostenlose Services"]) {
+  assert.equal((nav.match(/<a\s/g) || []).length, 4, "Three divisions plus Self Solutions")
+  for (const label of ["Beratung &amp; Projekte", "Unternehmenssoftware", "Essentials", "Kostenlose Services", "Self Solutions", "Wissen &amp; Anleitungen"]) {
     assert.ok(nav.includes(label), `Navigation missing ${label}`)
   }
   assert.ok(!nav.includes("Ablauf") && !nav.includes("Kontakt"), "No process/contact navigation items")
@@ -35,4 +35,4 @@ assert.match(product, /href="https:\/\/rheinland-essentials\.alpher5\.chatgpt\.s
 assert.match(product, /fiktive Testdaten/, "Pilot limitation must remain visible")
 assert.match(product, /rel="canonical" href="https:\/\/www\.rheinland-solutions\.de\/secure-data-collection"/, "Canonical must identify the product URL")
 assert.doesNotMatch(product, /Besucheranmeldung/, "Product must not be limited to visitor registration")
-console.log(`PASS: 5 routes, shared three-division navigation, and 15 service/link checks against ${base}`)
+console.log(`PASS: 5 routes, shared navigation with three divisions and Self Solutions, and 15 service/link checks against ${base}`)

@@ -3,7 +3,7 @@ import type { Article } from "./types"
 export const businessArticles: Article[] = [
   {
     number: 9, slug: "informationen-mit-formularen-erfassen", category: "Im Betrieb",
-    title: "Schluss mit Informationen aus fünf E-Mails: ein Formular, ein klarer Ablauf.",
+    title: "Anfragen mit einem eigenen Formular erfassen",
     description: "Entwirf einen strukturierten Anfrageprozess und teste Formular, Benutzerzugang, Datenansicht und Export mit fiktiven Angaben.",
     lead: "Eine Anfrage kommt per Mail, die Ergänzung per Messenger und die entscheidende Angabe erst auf Nachfrage. Ein gutes Formular verkürzt diese Schleife. Entscheidend ist nicht, möglichst viele Felder einzubauen, sondern die Informationen abzufragen, mit denen der nächste Arbeitsschritt wirklich beginnen kann.",
     result: "Ein getesteter Formularablauf für fiktive Serviceanfragen – von der Feldplanung über einen Benutzerzugang bis zum Export.",
@@ -22,7 +22,7 @@ export const businessArticles: Article[] = [
   },
   {
     number: 10, slug: "betriebliche-startseite", category: "Im Betrieb",
-    title: "Eine Startseite für deinen Betrieb – alles Wichtige an einem Ort.",
+    title: "Eine gemeinsame Startseite für deinen Betrieb",
     description: "Baue eine kleine interne Werkzeugübersicht und teste sie im Team, bevor daraus ein großes Intranet wird.",
     lead: "Wo liegt das Formular? Welcher Link führt zur richtigen Anwendung? Wen frage ich bei einem Problem? Eine betriebliche Startseite beantwortet diese Fragen, ohne dass jemand alle Systeme ersetzen muss. Ihr Nutzen entsteht durch Orientierung, nicht durch möglichst viele Kacheln.",
     result: "Eine lokal nutzbare HTML-Startseite mit eindeutig beschrifteten Links und klarer Zuständigkeit – ohne Server, Anmeldung oder Tracking.",
@@ -66,7 +66,7 @@ small{display:block}
   },
   {
     number: 11, slug: "bueroaufgaben-automatisieren", category: "Im Betrieb",
-    title: "Diese kleinen Büroaufgaben musst du nicht jedes Mal von Hand erledigen.",
+    title: "Einen Datei-Eingang automatisch prüfen",
     description: "Beginne mit einer lesenden Automation: Ein Dateieingang wird zur Prüfliste, ohne Dateien zu verschieben oder zu löschen.",
     lead: "Automatisierung muss nicht mit einem komplizierten Gesamtsystem beginnen. Schon eine verlässliche Liste kann wiederkehrende Kontrolle erleichtern. Der entscheidende Schritt ist, eine kleine Aufgabe eindeutig zu beschreiben – einschließlich der Fälle, die weiterhin ein Mensch beurteilt.",
     result: "Ein Python-Skript, das die Dateien eines Testordners als CSV-Prüfliste ausgibt. Quelldateien bleiben unverändert.",
@@ -112,7 +112,7 @@ print(f'{len(zeilen)} Dateien erfasst. Quellen unverändert.')`, source: { title
   },
   {
     number: 12, slug: "selber-machen-oder-machen-lassen", category: "Im Betrieb",
-    title: "Selber machen oder machen lassen? So findest du den passenden Weg.",
+    title: "Selbst einrichten oder Unterstützung beauftragen?",
     description: "Eine ehrliche Entscheidungshilfe für Eigenbau, Unterstützung und betreute Umsetzung – mit einer Vorlage für dein Projektbriefing.",
     lead: "Die ersten Schritte selbst umzusetzen kann Spaß machen und sehr sinnvoll sein. Nicht jeder möchte anschließend aber Updates prüfen, Störungen eingrenzen und Sicherungen testen. Entscheidend ist deshalb nicht nur, wer eine Lösung aufbaut, sondern wer sie später zuverlässig betreiben kann.",
     result: "Ein kurzes, versandfertiges Projektbriefing und eine begründete Entscheidung über den gewünschten Unterstützungsumfang.",

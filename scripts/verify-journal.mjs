@@ -77,7 +77,14 @@ if (base) {
   assert.equal(index.status, 200)
   const indexHtml = await index.text()
   assert.ok(indexHtml.includes("Self Solutions"))
-  assert.ok(indexHtml.includes("by Rheinland Solutions"))
+  assert.doesNotMatch(indexHtml, /by Rheinland Solutions|↗|→|←/)
+  const blogNav = indexHtml.match(/<nav[^>]*aria-label="Hauptnavigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1]
+  assert.match(blogNav, /href="\/blog" aria-current="true"/)
+  assert.equal((blogNav.match(/href="\/blog"/g) || []).length, 1)
+  const mobileNav = indexHtml.match(/<nav[^>]*aria-label="Mobile Navigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1]
+  assert.match(mobileNav, /href="\/blog" aria-current="true"/)
+  assert.equal((mobileNav.match(/href="\/blog"/g) || []).length, 1)
+  assert.doesNotMatch(indexHtml, /journal-nav-link|journal-promise|journal-tagline/)
   assert.ok(indexHtml.includes('aria-label="Einfach anfangen"'))
   assert.ok(indexHtml.includes("Einfach digital"))
   for (const article of articles) assert.ok(indexHtml.includes(`href="/blog/${article.slug}"`), `Index link: ${article.slug}`)
@@ -85,6 +92,11 @@ if (base) {
     const response = await fetch(new URL(`/blog/${article.slug}`, base))
     assert.equal(response.status, 200, article.slug)
     const html = await response.text()
+    const prose = html.match(/<article class="journal-prose"[\s\S]*?<\/article>/)?.[0]
+    assert.doesNotMatch(prose, /↗|→|←/)
+    assert.doesNotMatch(html, /by Rheinland Solutions|journal-section-number|Anleitung lesen/)
+    const nav = html.match(/<nav[^>]*aria-label="Hauptnavigation"[^>]*>([\s\S]*?)<\/nav>/)?.[1]
+    assert.match(nav, /href="\/blog" aria-current="true"/)
     assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, "Exactly one main heading")
     assert.ok(html.includes(`rel="canonical" href="https://www.rheinland-solutions.de/blog/${article.slug}"`))
     assert.ok(html.includes('aria-label="In diesem Beitrag"'))
