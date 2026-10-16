@@ -147,7 +147,7 @@ export function ProcessSection() {
 
                 {/* Mobile connector */}
                 {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center py-4">
+                  <div className="process-mobile-connector lg:hidden flex justify-center py-4">
                     <div className="w-1 h-10 bg-gradient-to-b from-border to-primary/30 rounded-full relative">
                       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary shadow-lg" />
                     </div>

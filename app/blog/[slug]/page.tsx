@@ -25,6 +25,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = getArticle((await params).slug)
   if (!article) notFound()
   const related = article.related.map(getArticle).filter(item => item !== undefined)
+  const contents = <><a href="#ergebnis">Das Ergebnis</a>{article.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}<a href="#pruefliste">Deine Prüfliste</a><a href="#unterstuetzung">Unterstützung</a></>
   const jsonLd = {
     "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title,
     description: article.description, datePublished: journalDate, dateModified: journalDate,
@@ -37,7 +38,10 @@ export default async function ArticlePage({ params }: Props) {
       <nav className="journal-breadcrumb" aria-label="Brotkrumennavigation"><Link href="/">Startseite</Link><span aria-hidden="true">/</span><Link href="/blog">Self Solutions</Link><span aria-hidden="true">/</span><span>{article.category}</span></nav>
       <header className="journal-article-header"><p className="journal-eyebrow">{article.category}</p><h1>{article.title}</h1><p className="journal-lead">{article.lead}</p><p className="journal-byline">Rheinland Solutions <span>·</span> <time dateTime={journalDate}>10. Oktober 2026</time> <span>·</span> {readingMinutes(article)} Min. Lesezeit</p></header>
       <div className="journal-article-layout">
-        <aside className="journal-toc"><nav aria-label="In diesem Beitrag"><p>In diesem Beitrag</p><a href="#ergebnis">Das Ergebnis</a>{article.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}<a href="#pruefliste">Deine Prüfliste</a><a href="#unterstuetzung">Unterstützung</a></nav></aside>
+        <aside className="journal-toc">
+          <nav className="journal-toc-desktop" aria-label="In diesem Beitrag"><p>In diesem Beitrag</p>{contents}</nav>
+          <details className="journal-toc-mobile"><summary>In diesem Beitrag</summary><nav aria-label="Inhaltsverzeichnis">{contents}</nav></details>
+        </aside>
         <article className="journal-prose" aria-label={article.title}>
           <section id="ergebnis" className="journal-result"><h2>Kurzüberblick</h2><p>{article.result}</p><span className="journal-level">{article.level}</span></section>
           <section className="journal-prerequisites"><h2>Vor dem Start</h2><ul>{article.prerequisites.map(item => <li key={item}>{item}</li>)}</ul></section>

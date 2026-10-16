@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
+import * as Dialog from "@radix-ui/react-dialog"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Mail } from "lucide-react"
@@ -31,15 +32,13 @@ export function Header() {
   }, [])
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
+    const desktop = window.matchMedia("(min-width: 1024px)")
+    const closeOnDesktop = () => {
+      if (desktop.matches) setIsMobileMenuOpen(false)
     }
-    return () => {
-      document.body.style.overflow = ""
-    }
-  }, [isMobileMenuOpen])
+    desktop.addEventListener("change", closeOnDesktop)
+    return () => desktop.removeEventListener("change", closeOnDesktop)
+  }, [])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) {
@@ -63,7 +62,7 @@ export function Header() {
   }
 
   return (
-    <>
+    <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
       <header
         className={cn(
           "site-header fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out border-t-[6px] border-t-[#f1e613]",
@@ -112,14 +111,12 @@ export function Header() {
               </a>
 
               {/* Mobile Menu Button */}
-              <button
+              <Dialog.Trigger asChild><button
                 className={cn(
                   "p-2 rounded-full transition-all duration-300",
                   isScrolled ? "text-secondary-foreground hover:bg-white/10" : "text-white hover:bg-white/10",
                 )}
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
-                aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
               >
                 <div className="relative w-5 h-5">
@@ -136,93 +133,69 @@ export function Header() {
                     )}
                   />
                 </div>
-              </button>
+              </button></Dialog.Trigger>
             </div>
           </div>
         </div>
       </header>
 
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)}>
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-        </div>
-      )}
-
-      <div
+      <Dialog.Portal>
+      <Dialog.Overlay className="mobile-nav-overlay lg:hidden" />
+      <Dialog.Content
         id="mobile-menu"
-        className={cn(
-          "fixed top-0 right-0 z-50 h-full w-[85%] max-w-sm bg-secondary shadow-2xl lg:hidden transition-transform duration-300 ease-out",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
-        )}
-        aria-hidden={!isMobileMenuOpen}
-        inert={!isMobileMenuOpen}
+        className="mobile-nav-panel lg:hidden"
+        aria-describedby={undefined}
       >
+        <Dialog.Title className="sr-only">Navigation</Dialog.Title>
         {/* Menu Header */}
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
-          <Logo variant="light" size="sm" />
-          <button
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="p-2 rounded-full text-secondary-foreground hover:bg-white/10 transition-colors"
+        <div className="mobile-nav-header">
+          <Logo variant="default" size="sm" />
+          <Dialog.Close asChild><button
+            className="mobile-nav-close"
             aria-label="Menü schließen"
           >
             <X className="w-5 h-5" />
-          </button>
+          </button></Dialog.Close>
         </div>
 
         {/* Menu Content */}
         <nav
-          className="flex flex-col h-[calc(100%-80px)] overflow-y-auto"
           role="navigation"
           aria-label="Mobile Navigation"
         >
-          <div className="flex-1 p-4 space-y-1">
-            {navLinks.map((link, index) => (
+          <div className="mobile-nav-links">
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 aria-current={activeHref === link.href ? "true" : undefined}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={cn(
-                  "text-secondary-foreground/80 hover:text-gold py-3 px-4 rounded-xl transition-all duration-300 hover:bg-white/5 text-base font-medium flex items-center justify-between group",
-                  "transform transition-all duration-300",
-                  isMobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4",
-                )}
-                style={{ transitionDelay: isMobileMenuOpen ? `${index * 50 + 100}ms` : "0ms" }}
-                tabIndex={isMobileMenuOpen ? 0 : -1}
               >
-                <span>{link.label}<small className="block text-xs font-normal mt-1">{link.description}</small></span>
+                <span>{link.label}<small>{link.description}</small></span>
               </a>
             ))}
           </div>
 
           {/* Menu Footer CTA */}
-          <div
-            className={cn(
-              "p-4 border-t border-white/10 space-y-3 transition-all duration-300",
-              isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
-            )}
-            style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
-          >
+          <div className="mobile-nav-footer">
             <Button
               asChild
-              className="w-full bg-gold hover:bg-gold/90 text-secondary font-semibold h-12 text-base shadow-lg shadow-gold/25"
+              className="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold h-12 text-sm"
             >
-              <a href="/#demo" onClick={(e) => handleNavClick(e, "/#demo")} tabIndex={isMobileMenuOpen ? 0 : -1}>
+              <a href="/#mobile-anfrage" onClick={(e) => handleNavClick(e, "/#mobile-anfrage")}>
                 Erstgespräch vereinbaren
               </a>
             </Button>
             <a
               href="mailto:info@rheinland-solutions.de"
-              className="flex items-center justify-center gap-2 text-secondary-foreground/60 py-2 text-sm hover:text-secondary-foreground transition-colors"
-              tabIndex={isMobileMenuOpen ? 0 : -1}
             >
               <Mail className="w-4 h-4" />
               info@rheinland-solutions.de
             </a>
           </div>
         </nav>
-      </div>
-    </>
+      </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   )
 }

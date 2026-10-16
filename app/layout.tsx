@@ -5,6 +5,7 @@ import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 import "./layout-polish.css"
 import "./blog/blog.css"
+import "./mobile.css"
 
 export const metadata: Metadata = {
   title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
