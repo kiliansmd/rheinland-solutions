@@ -1,17 +1,14 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Rheinland Solutions",
-  description: "Datenschutzerklärung von Rheinland Solutions gemäß DSGVO.",
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+export const metadata = pageMetadata(
+  "Datenschutzerklärung | Rheinland Solutions",
+  "Informationen zum Datenschutz, zur Verarbeitung von Anfragen und zu deinen Rechten bei Rheinland Solutions.",
+  "/datenschutz",
+)
 
 export default function DatenschutzPage() {
   return (

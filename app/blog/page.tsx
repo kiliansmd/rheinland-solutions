@@ -1,16 +1,14 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { JournalIndex } from "@/components/journal-index"
 import { articleSummaries, journalCategories } from "@/lib/journal"
 
-export const metadata: Metadata = {
-  title: "Self Solutions – Digitales verstehen und selber machen | Rheinland Solutions",
-  description: "Self Solutions: Anleitungen zu Smart Home, WLAN, Homeservern und eigenen Websites. Mit praktischen Beispielen und verständlichen Erklärungen.",
-  alternates: { canonical: "https://www.rheinland-solutions.de/blog" },
-  openGraph: { title: "Self Solutions", description: "Anleitungen zu Smart Home, WLAN, Homeservern und eigenen Websites.", url: "https://www.rheinland-solutions.de/blog", type: "website" },
-  twitter: { card: "summary", title: "Self Solutions | Rheinland Solutions", description: "Smart Home, Websites und digitaler Alltag einfach erklärt." },
-}
+export const metadata = pageMetadata(
+  "Self Solutions – Digitales verstehen und selber machen | Rheinland Solutions",
+  "Self Solutions: Anleitungen zu Smart Home, WLAN, Homeservern und eigenen Websites. Mit praktischen Beispielen und verständlichen Erklärungen.",
+  "/blog",
+)
 
 export default function BlogPage() {
   return <><Header /><main id="main" className="journal-page">

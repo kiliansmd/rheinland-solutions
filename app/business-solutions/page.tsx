@@ -1,13 +1,13 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { SecureDataTeaser } from "@/components/secure-data-teaser"
 
-export const metadata: Metadata = {
-  title: "Unternehmenssoftware | Rheinland Solutions",
-  description: "Betreute digitale Lösungen für dein Unternehmen. Entdecke Secure Data Collection und finde den passenden Service für deine Abläufe.",
-  alternates: { canonical: "https://www.rheinland-solutions.de/business-solutions" },
-}
+export const metadata = pageMetadata(
+  "Unternehmenssoftware | Rheinland Solutions",
+  "Betreute digitale Lösungen für dein Unternehmen. Entdecke Secure Data Collection und finde den passenden Service für deine Abläufe.",
+  "/business-solutions",
+)
 
 export default function BusinessSolutionsPage() {
   return <>

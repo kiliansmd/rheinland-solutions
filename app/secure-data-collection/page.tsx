@@ -1,21 +1,14 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import { ArrowRight, Check, Database, FileInput, LockKeyhole, Users } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { secureDataLinks } from "@/lib/secure-data"
 
-export const metadata: Metadata = {
-  title: "Secure Data Collection | Rheinland Solutions",
-  description: "Informationen sicher erfassen und gezielt weitergeben. Individuelle Formulare, geschützte Zugänge und persönliche Begleitung. Business Service ab 250 € netto im Monat.",
-  alternates: { canonical: "https://www.rheinland-solutions.de/secure-data-collection" },
-  openGraph: {
-    title: "Secure Data Collection – ein Business Service von Rheinland Solutions",
-    description: "Deine Formulare. Deine Abläufe. Informationen sicher erfassen und dort nutzen, wo du sie brauchst. Ab 250 € netto im Monat.",
-    url: "https://www.rheinland-solutions.de/secure-data-collection",
-    locale: "de_DE",
-    type: "website",
-  },
-}
+export const metadata = pageMetadata(
+  "Secure Data Collection | Rheinland Solutions",
+  "Informationen sicher erfassen und gezielt weitergeben. Individuelle Formulare, geschützte Zugänge und persönliche Begleitung. Business Service ab 250 € netto im Monat.",
+  "/secure-data-collection",
+)
 
 const benefits = [
   { icon: FileInput, title: "Deine Fragen. Dein Formular.", text: "Du legst selbst fest, welche Informationen du brauchst. Ohne starre Vorlage und ohne dich auf einen bestimmten Anwendungsfall festzulegen." },

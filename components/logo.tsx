@@ -1,6 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 interface LogoProps {
   variant?: "default" | "light" | "dark"
@@ -19,11 +20,12 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
 
   return (
     <div className={cn("relative", className)}>
-      <img
+      <Image
         src={logoSrc}
         alt="Rheinland Solutions"
         width={sizes[size].width}
         height={sizes[size].height}
+        sizes={`${sizes[size].width}px`}
         className={cn("object-contain", variant === "light" && "brightness-0 invert")}
         decoding="async"
       />

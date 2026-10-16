@@ -66,3 +66,11 @@ footer .container { padding-block: 28px; }
   .collection-summary { padding: 24px; }
   .brand-title { font-size: clamp(32px, 9vw, 48px); }
 }
+/* Keep the first meaningful content visible from the initial render. */
+.hero-copy .hero-eyebrow,
+.hero-copy h1,
+.hero-copy .hero-intro,
+.hero-copy .hero-actions,
+.hero-form {
+  animation: none;
+}

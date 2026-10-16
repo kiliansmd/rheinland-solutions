@@ -2,12 +2,14 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { CookieBanner } from "@/components/cookie-banner"
+import { siteOrigin } from "@/lib/seo"
 import "./globals.css"
 import "./layout-polish.css"
 import "./blog/blog.css"
 import "./mobile.css"
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteOrigin),
   title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
   description:
     "Ihr Partner für digitale Transformation: Individuelle Beratung, Prozessoptimierung und praxisnahe Schulungen. Jetzt unverbindlich anfragen!",
@@ -48,10 +50,6 @@ export const metadata: Metadata = {
     title: "Digitalisierung, Prozess-Beratung & Schulungen | Rheinland Solutions",
     description: "Ihr Partner für digitale Transformation und Prozessoptimierung.",
   },
-  alternates: {
-    canonical: "https://rheinlandsolutions.de",
-  },
-    generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
@@ -79,8 +77,9 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               "name": "Rheinland Solutions",
               "description": "Ihr Partner für Digitalisierung, Prozess-Beratung und Schulungen",
-              "url": "https://rheinlandsolutions.de",
-              "logo": "https://rheinlandsolutions.de/images/logo-dark.png",
+              "@id": `${siteOrigin}/#organization`,
+              "url": siteOrigin,
+              "logo": `${siteOrigin}/images/logo-dark.png`,
               "founder": "Kevin Müller",
               "address": {
                 "@type": "PostalAddress",
@@ -95,10 +94,7 @@ export default function RootLayout({
                 "contactType": "customer service",
                 "areaServed": "DE",
                 "availableLanguage": "German"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/company/rheinlandsolutions"
-              ]
+              }
             })
           }}
         />
