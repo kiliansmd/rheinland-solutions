@@ -1,0 +1,29 @@
+Amazon-Produktlinks: Stand 17.10.2026
+
+PartnerNet im angemeldeten Konto geprüft:
+Store-ID rheinlandsolu-21; Website-Tracking-ID rs-website-21.
+Keine Änderungen an Bankdaten, Kontorechten oder Partnerbedingungen.
+
+Verifizierte Amazon-Detailseiten (keine Preis-/Verfügbarkeitsgarantie):
+https://www.amazon.de/dp/B0F9FS819H — GMKtec G3 Pro, i3-10110U, 16 GB DDR4, 512 GB SSD
+https://www.amazon.de/dp/B09SB38KMD — Samsung T7 Shield 1 TB blau, MU-PE1T0R/EU
+https://www.amazon.de/dp/B0G1MW1FFF — Shelly Plug S Gen3 weiß, 2er-Pack
+https://www.amazon.de/dp/B0CNS167ZG — Shelly H&T Gen3 schwarz, WLAN-Modell
+
+Modellbezeichnung und Ausstattung auf der jeweiligen Detailseite geprüft.
+Keine persönliche Produkterfahrung oder unabhängiger Hardwaretest behauptet.
+Keine Preise, Rezensionen, Sterne, Logos oder Amazon-Produktbilder übernommen.
+
+Technische Quellen:
+https://www.shelly.com/de/products/shelly-plug-s-gen3
+https://shelly-api-docs.shelly.cloud/gen2/Devices/Gen3/ShellyHTG3/
+https://www.home-assistant.io/integrations/shelly/
+https://www.samsung.com/de/memory-storage/portable-ssd/t7-shield-1tb-blue-external-storage-nvme-1050-mbs-mu-pe1t0r-eu/
+
+Programmhinweise:
+https://partnernet.amazon.de/help/operating/agreement/ — Identifying Yourself as an Associate
+https://partnernet.amazon.de/help/node/topic/GP38PJ6EUR6PFBEC — dokumentiertes dp/ASIN/ref=nosim?tag=PARTNERID-Format (deutscher Suchindex)
+
+Umsetzung: normale HTTPS-Textlinks, rel="sponsored nofollow", keine Amazon-Ressourcen
+vor dem Klick. Sichtbarer Hinweis am Artikelanfang und direkt vor Produktlinks.
+Produktlinks nur in acht sachlich passenden Beiträgen. Redaktionelle Quellen bleiben erhalten.
