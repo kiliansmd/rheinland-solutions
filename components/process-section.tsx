@@ -102,8 +102,8 @@ export function ProcessSection() {
                 key={step.number}
                 data-step={index}
                 className={cn(
-                  "relative transition-all duration-700",
-                  visibleSteps.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12",
+                  "relative lg:transition-all lg:duration-700",
+                  visibleSteps.includes(index) ? "lg:opacity-100 lg:translate-y-0" : "lg:opacity-0 lg:translate-y-12",
                 )}
                 style={{ transitionDelay: `${index * 150}ms` }}
                 onMouseEnter={() => setHoveredStep(index)}
