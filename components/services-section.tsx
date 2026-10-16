@@ -105,6 +105,8 @@ export function ServicesSection() {
             {services.map((service, index) => (
               <button
                 key={service.title}
+                type="button"
+                aria-pressed={activeService === index}
                 onClick={() => setActiveService(index)}
                 className={cn(
                   "flex items-center justify-center gap-2 px-3 sm:px-6 py-3 rounded-md font-medium transition-all duration-300 text-sm",

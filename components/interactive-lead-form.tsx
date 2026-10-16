@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useId, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -34,6 +34,7 @@ type FormData = {
 }
 
 export function InteractiveLeadForm() {
+  const consentId = useId()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState<FormData>({
     service: "",
@@ -88,7 +89,7 @@ export function InteractiveLeadForm() {
   }
 
   return (
-    <div className="bg-card rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-border">
+    <div className="lead-form bg-card rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-border">
       {/* Header */}
       <div className="bg-secondary px-5 py-4 sm:px-6 sm:py-5">
         <div className="flex items-start justify-between gap-4 mb-4">
@@ -156,6 +157,8 @@ export function InteractiveLeadForm() {
             <form onSubmit={handleSubmit} className="space-y-3">
               <Input
                 placeholder="Name *"
+                aria-label="Name"
+                autoComplete="name"
                 value={formData.name}
                 onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                 required
@@ -164,6 +167,9 @@ export function InteractiveLeadForm() {
               <Input
                 type="email"
                 placeholder="E-Mail-Adresse *"
+                aria-label="E-Mail-Adresse"
+                autoComplete="email"
+                inputMode="email"
                 value={formData.email}
                 onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                 required
@@ -171,6 +177,8 @@ export function InteractiveLeadForm() {
               />
               <Input
                 placeholder="Unternehmen (optional)"
+                aria-label="Unternehmen (optional)"
+                autoComplete="organization"
                 value={formData.company}
                 onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
                 className="h-11"
@@ -178,6 +186,7 @@ export function InteractiveLeadForm() {
 
               <Textarea
                 placeholder="Worum geht es bei Ihrem Projekt? (optional)"
+                aria-label="Worum geht es bei Ihrem Projekt? (optional)"
                 value={formData.message}
                 onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
                 rows={3}
@@ -185,14 +194,14 @@ export function InteractiveLeadForm() {
               />
 
               {/* Consent */}
-              <div className="flex items-start gap-2 pt-1">
+              <div className="lead-form-consent flex items-start gap-2 pt-1">
                 <Checkbox
-                  id="consent"
+                  id={consentId}
                   checked={formData.consent}
                   onCheckedChange={(checked) => setFormData((prev) => ({ ...prev, consent: checked === true }))}
                   className="mt-0.5"
                 />
-                <label htmlFor="consent" className="text-xs text-muted-foreground leading-relaxed">
+                <label htmlFor={consentId} className="text-xs text-muted-foreground leading-relaxed">
                   Ich stimme der Verarbeitung meiner Daten zu.{" "}
                   <a href="/datenschutz" className="text-primary hover:underline">
                     Datenschutz
@@ -232,7 +241,7 @@ export function InteractiveLeadForm() {
 
       {/* Trust Footer */}
       <div className="px-4 sm:px-6 pb-4">
-        <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground border-t border-border pt-4">
+        <div className="lead-form-trust flex items-center justify-center gap-4 text-xs text-muted-foreground border-t border-border pt-4">
           <div className="flex items-center gap-1">
             <Shield className="w-3 h-3 text-success" />
             <span>SSL-verschlüsselt</span>
