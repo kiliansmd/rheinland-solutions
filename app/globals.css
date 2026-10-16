@@ -693,7 +693,7 @@ footer a:hover { color: var(--consulting-ink) !important; }
   #leistungen a { width: 100%; justify-content: center; }
 
   #ablauf { padding-top: 4.5rem; padding-bottom: 4.5rem; }
-  #ablauf .grid { gap: 0; }
+  #ablauf .grid { gap: 1.5rem; }
   #ablauf [data-step] > div:first-child { border-top-width: 5px; }
   #ablauf [data-step] > div:first-child > div { padding: 1.25rem; }
   #ablauf .mt-16 { margin-top: 2.5rem; }
