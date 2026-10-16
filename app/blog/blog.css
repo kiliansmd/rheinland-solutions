@@ -68,6 +68,18 @@
 .journal-limits{margin-top:30px;padding-top:22px;border-top:1px solid #dedfec;font-size:15px;color:#585c70}
 .journal-limits h2{font-size:20px;color:#10123f}
 .journal-related{border-top:1px solid #dedfec;margin-top:48px;padding-top:28px}
+.journal-affiliate-notice{font-size:13px;line-height:1.7;color:#585c70;border-bottom:1px solid #dedfec;padding-bottom:18px}
+.journal-affiliate-notice a{text-decoration:underline;text-underline-offset:3px}
+.journal-products{margin-top:34px;padding-top:26px;border-top:1px solid #dedfec}
+.journal-products .journal-product-label{font-size:12px;font-weight:600;letter-spacing:.04em;color:#62657b;margin-bottom:10px}
+.journal-products .journal-product-disclosure{font-size:14px;line-height:1.7;color:#585c70;padding-left:16px;border-left:2px solid #d1c500}
+.journal-products .journal-product-list{list-style:none;margin:24px 0;padding:0;display:grid;gap:24px}
+.journal-product-list>li{min-width:0;margin:0;padding:0 0 24px;border-bottom:1px solid #dedfec}
+.journal-product-list h3{font-size:20px;line-height:1.4;font-weight:600;letter-spacing:-.015em;margin:0 0 10px;text-wrap:pretty}
+.journal-product-list p{margin-bottom:12px}
+.journal-products .journal-product-note{font-size:14px;line-height:1.75;color:#585c70}
+.journal-product-link{display:inline-block;max-width:100%;padding-block:10px;min-height:44px;font-size:15px;font-weight:600;line-height:1.65;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.journal-product-link span{font-weight:400;color:#62657b}
 .journal-related>h2{margin-bottom:0}
 .journal-teaser{padding-block:40px;border-top:1px solid #dedfec}
 .journal-teaser h2{font-size:clamp(28px,3vw,40px);line-height:1.2;letter-spacing:-.03em;margin:0 0 16px}

@@ -177,13 +177,36 @@ export default function DatenschutzPage() {
               </p>
             </section>
 
+            <section id="amazon-partnerlinks">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
+                7. Amazon-Partnerlinks
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                In ausgewählten Blogbeiträgen verwenden wir als Werbung gekennzeichnete
+                Links zu Amazon.de. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.
+                Die Links enthalten unsere Partnerkennung, damit Amazon qualifizierte
+                Käufe unserem Partnerkonto zuordnen kann.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
+                Wir binden hierfür ausschließlich Textlinks ein, keine Amazon-Widgets,
+                Produktbilder von Amazon-Servern oder Tracking-Skripte. Allein durch die
+                Anzeige dieser Links wird keine Verbindung zu Amazon aufgebaut.
+                Erst wenn Sie einen Link öffnen, besuchen Sie Amazon. Dort verarbeitet
+                Amazon technische Zugriffsdaten und kann Cookies oder ähnliche Verfahren
+                zur Zuordnung verwenden. Einzelheiten finden Sie in den{" "}
+                <a className="underline underline-offset-4" href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010">Datenschutzhinweisen von Amazon</a>
+                {" "}und den{" "}
+                <a className="underline underline-offset-4" href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201890250">Cookie-Hinweisen von Amazon</a>.
+              </p>
+            </section>
+
             {/* Aktualität */}
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-4">
-                7. Aktualität und Änderung dieser Datenschutzerklärung
+                8. Aktualität und Änderung dieser Datenschutzerklärung
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2026.
+                Stand: März 2026; ergänzt um Amazon-Partnerlinks am 17. Oktober 2026.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-3">
                 Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. 
