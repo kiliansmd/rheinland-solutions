@@ -1,5 +1,4 @@
-"use client"
-
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { InteractiveLeadForm } from "./interactive-lead-form"
 import { Button } from "@/components/ui/button"
@@ -8,27 +7,18 @@ export function HeroSection() {
   return (
     <section id="demo" className="hero-modern relative flex items-center bg-[#f1e613] text-[#10123f]">
       <div className="hero-side-label" aria-hidden="true">RHEINLAND · SOLINGEN · DIGITAL</div>
-      {/* Background Video (Desktop) / Image (Mobile) */}
-      <div className="hero-visual absolute inset-0 z-0 overflow-hidden">
-        {/* Video Background - Desktop only */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover hidden lg:block"
-          style={{ minWidth: '100%', minHeight: '100%' }}
-        >
-          <source src="/videos/cologne.mp4" type="video/mp4" />
-        </video>
-        {/* Image Fallback - Mobile and video fallback */}
-        <img
-          src="/images/hero-cityscape.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        {/* Gradient overlay - slightly more transparent to show video */}
+      <div className="hero-visual absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 1023px)" srcSet="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" />
+          <Image
+            src="/images/hero-cityscape.jpg"
+            alt=""
+            fill
+            sizes="(max-width: 1023px) 1px, 47vw"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
+        {/* Decorative background stays behind the content. */}
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/75 to-secondary/25" />
         <div className="absolute inset-0 hero-grid" />
       </div>

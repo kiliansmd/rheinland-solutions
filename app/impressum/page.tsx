@@ -1,17 +1,14 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ArrowLeft } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Impressum | Rheinland Solutions",
-  description: "Impressum und rechtliche Angaben von Rheinland Solutions gemäß § 5 DDG.",
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
+export const metadata = pageMetadata(
+  "Impressum | Rheinland Solutions",
+  "Impressum und rechtliche Angaben von Rheinland Solutions.",
+  "/impressum",
+)
 
 export default function ImpressumPage() {
   return (

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { articles, getArticle, journalDate, readingMinutes } from "@/lib/journal"
+import { pageMetadata, siteOrigin } from "@/lib/seo"
 
 type Props = { params: Promise<{ slug: string }> }
 export const dynamicParams = false
@@ -12,12 +13,10 @@ export function generateStaticParams() { return articles.map(({ slug }) => ({ sl
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticle((await params).slug)
   if (!article) return { title: "Beitrag nicht gefunden" }
-  const url = `https://www.rheinland-solutions.de/blog/${article.slug}`
+  const metadata = pageMetadata(`${article.title} | Rheinland Solutions`, article.description, `/blog/${article.slug}`)
   return {
-    title: `${article.title} | Rheinland Solutions`, description: article.description,
-    alternates: { canonical: url },
-    openGraph: { title: article.title, description: article.description, url, type: "article", publishedTime: journalDate, authors: ["Rheinland Solutions"] },
-    twitter: { card: "summary", title: article.title, description: article.description },
+    ...metadata,
+    openGraph: { ...metadata.openGraph, title: article.title, type: "article", publishedTime: journalDate, authors: ["Rheinland Solutions"] },
   }
 }
 
@@ -31,6 +30,8 @@ export default async function ArticlePage({ params }: Props) {
     description: article.description, datePublished: journalDate, dateModified: journalDate,
     author: { "@type": "Organization", name: "Rheinland Solutions", url: "https://www.rheinland-solutions.de/" },
     mainEntityOfPage: `https://www.rheinland-solutions.de/blog/${article.slug}`, inLanguage: "de-DE",
+    image: `${siteOrigin}/opengraph-image`,
+    publisher: { "@id": `${siteOrigin}/#organization` },
   }
   return <><Header /><main id="main" className="journal-page journal-article-page">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
