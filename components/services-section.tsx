@@ -184,8 +184,8 @@ export function ServicesSection() {
 
         {/* Bottom Note */}
         <div className={cn(
-          "mt-16 text-center transition-all duration-700 delay-300",
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          "mt-16 text-center lg:transition-all lg:duration-700 lg:delay-300",
+          isVisible ? "lg:opacity-100 lg:translate-y-0" : "lg:opacity-0 lg:translate-y-8"
         )}>
           <p className="text-foreground/50 text-sm">
             Jedes Projekt ist einzigartig. Kontaktieren Sie uns für ein individuelles Angebot.

@@ -56,12 +56,12 @@ export function FaqSection() {
   }, [])
 
   return (
-    <section className="py-24 lg:py-32 bg-background relative" ref={sectionRef}>
+    <section className="faq-section py-24 lg:py-32 bg-background relative" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={cn(
-            "text-center max-w-3xl mx-auto mb-12 lg:mb-14 transition-all duration-700",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+            "text-center max-w-3xl mx-auto mb-12 lg:mb-14 lg:transition-all lg:duration-700",
+            isVisible ? "lg:opacity-100 lg:translate-y-0" : "lg:opacity-0 lg:translate-y-8",
           )}
         >
           <div className="flex items-center justify-center gap-4 mb-6">
@@ -81,8 +81,8 @@ export function FaqSection() {
 
         <div
           className={cn(
-            "max-w-3xl mx-auto transition-all duration-700 delay-100",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+            "max-w-3xl mx-auto lg:transition-all lg:duration-700 lg:delay-100",
+            isVisible ? "lg:opacity-100 lg:translate-y-0" : "lg:opacity-0 lg:translate-y-8",
           )}
         >
           <Accordion type="single" collapsible className="space-y-3">
@@ -102,8 +102,8 @@ export function FaqSection() {
 
           <div
             className={cn(
-              "mt-12 bg-gradient-to-br from-muted via-muted to-muted/80 rounded-2xl p-6 sm:p-8 border border-border/50 shadow-lg transition-all duration-700 delay-300",
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+              "faq-contact mt-12 bg-gradient-to-br from-muted via-muted to-muted/80 rounded-2xl p-6 sm:p-8 border border-border/50 shadow-lg lg:transition-all lg:duration-700 lg:delay-300",
+              isVisible ? "lg:opacity-100 lg:translate-y-0" : "lg:opacity-0 lg:translate-y-8",
             )}
           >
             <div className="flex flex-wrap items-center justify-center gap-4 mb-5">
