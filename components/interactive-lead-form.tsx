@@ -91,7 +91,7 @@ export function InteractiveLeadForm() {
   return (
     <div className="lead-form bg-card rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-border">
       {/* Header */}
-      <div className="bg-secondary px-5 py-4 sm:px-6 sm:py-5">
+      <div className="lead-form-header bg-secondary px-5 py-4 sm:px-6 sm:py-5">
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
             <span className="block text-[10px] uppercase tracking-[0.2em] text-secondary-foreground/55 font-semibold mb-1">
@@ -114,7 +114,7 @@ export function InteractiveLeadForm() {
       </div>
 
       {/* Form Content */}
-      <div className="p-5 sm:p-6">
+      <div className="lead-form-body p-5 sm:p-6">
         {/* Step 1: Service Selection */}
         {step === 1 && (
           <div className="animate-fade-in-up">
@@ -122,13 +122,13 @@ export function InteractiveLeadForm() {
               Was möchten Sie voranbringen?
             </h3>
             <p className="text-sm text-muted-foreground mb-5">Wählen Sie den passenden Schwerpunkt.</p>
-            <div className="space-y-2.5">
+            <div className="lead-form-options space-y-2.5">
               {services.map((service) => (
                 <button
                   key={service.id}
                   onClick={() => handleSelect(service.id)}
                   className={cn(
-                    "w-full p-3.5 rounded-lg border text-left transition-all duration-200 hover:border-primary hover:bg-primary/5 flex items-center gap-3.5",
+                    "lead-form-option w-full p-3.5 rounded-lg border text-left transition-all duration-200 hover:border-primary hover:bg-primary/5 flex items-center gap-3.5",
                     formData.service === service.id ? "border-primary bg-primary/5" : "border-border",
                   )}
                 >
@@ -240,7 +240,7 @@ export function InteractiveLeadForm() {
       </div>
 
       {/* Trust Footer */}
-      <div className="px-4 sm:px-6 pb-4">
+      <div className="lead-form-footer px-4 sm:px-6 pb-4">
         <div className="lead-form-trust flex items-center justify-center gap-4 text-xs text-muted-foreground border-t border-border pt-4">
           <div className="flex items-center gap-1">
             <Shield className="w-3 h-3 text-success" />

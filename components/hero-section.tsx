@@ -105,9 +105,9 @@ export function MobileHeroForm() {
         <div className="hero-mobile-proof" aria-label="Unser Ansatz">
           <p>Von Solingen aus. Für Unternehmen, die Veränderung umsetzen wollen.</p>
           <ul>
-            <li><span>01</span> Klar analysieren</li>
-            <li><span>02</span> Praktisch umsetzen</li>
-            <li><span>03</span> Teams befähigen</li>
+            <li><span>01</span><strong>Klar analysieren</strong></li>
+            <li><span>02</span><strong>Praktisch umsetzen</strong></li>
+            <li><span>03</span><strong>Teams befähigen</strong></li>
           </ul>
         </div>
         <InteractiveLeadForm />

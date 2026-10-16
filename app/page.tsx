@@ -9,7 +9,7 @@ import { JournalTeaser } from "@/components/journal-teaser"
 
 export default function Home() {
   return (
-    <main id="main" className="min-h-screen min-h-dvh">
+    <main id="main" className="rs-home min-h-screen min-h-dvh">
       <div className="hero-screenshot">
         <Header />
         <HeroSection />
