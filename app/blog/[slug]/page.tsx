@@ -5,6 +5,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { articles, getArticle, journalDate, readingMinutes } from "@/lib/journal"
 import { pageMetadata, siteOrigin } from "@/lib/seo"
+import { JournalProducts } from "@/components/journal-products"
+import { getArticleProducts, productReviewDate } from "@/lib/journal/products"
 
 type Props = { params: Promise<{ slug: string }> }
 export const dynamicParams = false
@@ -24,10 +26,11 @@ export default async function ArticlePage({ params }: Props) {
   const article = getArticle((await params).slug)
   if (!article) notFound()
   const related = article.related.map(getArticle).filter(item => item !== undefined)
-  const contents = <><a href="#ergebnis">Das Ergebnis</a>{article.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}<a href="#pruefliste">Deine Prüfliste</a><a href="#unterstuetzung">Unterstützung</a></>
+  const hasProducts = getArticleProducts(article.slug) !== null
+  const contents = <><a href="#ergebnis">Das Ergebnis</a>{article.sections.map(section => <a key={section.id} href={`#${section.id}`}>{section.title}</a>)}{hasProducts && <a href="#produktbeispiele">Hardware-Beispiele</a>}<a href="#pruefliste">Deine Prüfliste</a><a href="#unterstuetzung">Unterstützung</a></>
   const jsonLd = {
     "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title,
-    description: article.description, datePublished: journalDate, dateModified: journalDate,
+    description: article.description, datePublished: journalDate, dateModified: hasProducts ? productReviewDate : journalDate,
     author: { "@type": "Organization", name: "Rheinland Solutions", url: "https://www.rheinland-solutions.de/" },
     mainEntityOfPage: `https://www.rheinland-solutions.de/blog/${article.slug}`, inLanguage: "de-DE",
     image: `${siteOrigin}/opengraph-image`,
@@ -44,9 +47,11 @@ export default async function ArticlePage({ params }: Props) {
           <details className="journal-toc-mobile"><summary>In diesem Beitrag</summary><nav aria-label="Inhaltsverzeichnis">{contents}</nav></details>
         </aside>
         <article className="journal-prose" aria-label={article.title}>
+          {hasProducts && <p className="journal-affiliate-notice">Werbung: Dieser Beitrag enthält <a href="#produktbeispiele">gekennzeichnete Amazon-Partnerlinks</a>. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>}
           <section id="ergebnis" className="journal-result"><h2>Kurzüberblick</h2><p>{article.result}</p><span className="journal-level">{article.level}</span></section>
           <section className="journal-prerequisites"><h2>Vor dem Start</h2><ul>{article.prerequisites.map(item => <li key={item}>{item}</li>)}</ul></section>
           {article.sections.map(section => <section key={section.id} id={section.id} className="journal-section"><h2>{section.title}</h2>{section.paragraphs?.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{section.steps && <ol>{section.steps.map(step => <li key={step}>{step}</li>)}</ol>}{section.code && <pre tabIndex={0} aria-label={`Codebeispiel: ${section.title}`}><code>{section.code}</code></pre>}{section.source && <p className="journal-source">Zum Nachlesen: <a href={section.source.url}>{section.source.title}</a></p>}</section>)}
+          <JournalProducts slug={article.slug} />
           <section id="pruefliste" className="journal-checklist"><h2>Zum Prüfen</h2><ul>{article.checklist.map(item => <li key={item}>{item}</li>)}</ul></section>
           <section className="journal-limits"><h2>Hinweise</h2><p>{article.limits}</p></section>
           <section id="unterstuetzung" className="journal-cta"><h2>Unterstützung bei der Umsetzung</h2><p>{article.service}</p><a className="journal-button" href={`mailto:info@rheinland-solutions.de?subject=${encodeURIComponent(`Anfrage zum Beitrag: ${article.title}`)}`}>Projekt besprechen</a><Link className="journal-text-link" href="/#leistungen">Beratung & Projekte kennenlernen</Link></section>
